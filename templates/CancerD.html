@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cancer Information</title>
+
+     <link rel="stylesheet"
+href="{{ url_for('static', filename='sCheck.css') }}">
+
+</head>
+
+<body>
+
+   
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="/" class="logo">
+
+        Health<span>Care</span>
+
+    </a>
+
+
+
+    
+
+
+<div class="nav-links">
+
+    <a href="/">Home</a>
+
+    <a href="/explore-diseases">
+        Diseases
+    </a>
+
+    <!-- COMMON DISEASES DROPDOWN -->
+    <div class="dropdown">
+
+        <a href="#">
+            Common Diseases
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="/diabetes">
+                Diabetes
+            </a>
+
+            <a href="/cancer">
+                Cancer
+            </a>
+
+            <a href="/asthma">
+                Asthma
+            </a>
+
+        </div>
+
+    </div>
+
+    <a href="/appointment">
+        Appointment
+    </a>
+
+    <a href="/contact">
+        Contact
+    </a>
+
+</div>
+
+<div class="nav-buttons">
+
+    <a href="/symptom-checker" class="ai-btn">
+
+        AI Checker
+
+    </a>
+
+    <a href="/login" class="login-btn">
+
+        Login
+
+    </a>
+
+    <a href="/signup" class="signup-btn">
+
+        Sign Up
+
+    </a>
+
+</div>
+
+</nav>
+    <!-- HERO SECTION -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    ONCOLOGY HEALTHCARE
+                </p>
+
+                <h1>
+                    Understanding <span>Cancer</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Cancer is a disease where abnormal cells grow uncontrollably
+                    and may spread to other parts of the body. Learn about
+                    symptoms, causes, treatments, prevention, and early detection.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="primary-btn">
+                        Book Appointment
+                    </a>
+
+                    <a href="#symptoms" class="secondary-btn">
+                        Learn Symptoms
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="{{ url_for('static', filename='images/cancer1.jpg') }}" alt="Cancer Illustration">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- QUICK FACTS -->
+
+    <section class="checker-section">
+
+        <div class="checker-card">
+
+            <div class="section-heading">
+
+                <h2>Cancer Quick Facts</h2>
+
+                <p>
+                    Important information about cancer and early detection.
+                </p>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>Uncontrolled Cell Growth</h3>
+
+                    <p>
+                        Cancer develops when abnormal cells grow rapidly.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Can Spread</h3>
+
+                    <p>
+                        Some cancers spread to other organs and tissues.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Early Detection Matters</h3>
+
+                    <p>
+                        Early diagnosis improves treatment success rates.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHAT IS CANCER -->
+
+    <section class="info-section" id="about">
+
+        <div class="info-layout">
+
+            <div class="info-content">
+
+                <div class="section-heading left-align">
+
+                    <h2>What is Cancer?</h2>
+
+                </div>
+
+                <p>
+
+                    Cancer is a disease in which cells in the body begin
+                    growing uncontrollably. Normally, cells grow, divide,
+                    and die in an organized way. Cancer disrupts this process.
+
+                </p>
+
+                <p>
+
+                    These abnormal cells may form tumors, damage nearby
+                    tissues, and sometimes spread to other parts of the body
+                    through the blood or lymph system.
+
+                </p>
+
+                <p>
+
+                    There are many different types of cancer, including
+                    breast cancer, lung cancer, skin cancer, blood cancer,
+                    and colorectal cancer.
+
+                </p>
+
+            </div>
+
+            <div class="info-image">
+
+                <img src="{{ url_for('static', filename='images/cancer2.jpg') }}" alt="Cancer Cells Illustration">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SYMPTOMS -->
+
+    <section class="checker-section" id="symptoms">
+
+        <div class="section-heading">
+
+            <h2>Common Symptoms</h2>
+
+            <p>
+                Cancer symptoms vary depending on the type and stage.
+            </p>
+
+        </div>
+
+        <div class="symptoms-grid">
+
+            <div class="symptom-card">
+                Unexplained Weight Loss
+            </div>
+
+            <div class="symptom-card">
+                Persistent Fatigue
+            </div>
+
+            <div class="symptom-card">
+                Chronic Pain
+            </div>
+
+            <div class="symptom-card">
+                Persistent Cough
+            </div>
+
+            <div class="symptom-card">
+                Lumps or Swelling
+            </div>
+
+            <div class="symptom-card">
+                Changes in Skin
+            </div>
+
+        </div>
+
+        <div class="warning-box">
+
+            ⚠ Persistent or unusual symptoms should be medically evaluated as early as possible.
+
+        </div>
+
+    </section>
+
+    <!-- HOW CANCER DEVELOPS -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>How Cancer Develops</h2>
+
+            <p>
+                Cancer develops through several biological stages.
+            </p>
+
+        </div>
+
+        <div class="process-steps">
+
+            <div class="step-box">
+
+                <span>1</span>
+
+                <h3>Cell Mutation</h3>
+
+                <p>
+                    DNA damage causes abnormal changes in cells.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>2</span>
+
+                <h3>Rapid Growth</h3>
+
+                <p>
+                    Abnormal cells begin multiplying uncontrollably.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>3</span>
+
+                <h3>Tumor Formation</h3>
+
+                <p>
+                    Groups of abnormal cells form tumors.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>4</span>
+
+                <h3>Possible Spread</h3>
+
+                <p>
+                    Cancer cells may spread to other body areas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CAUSES -->
+
+    <section class="checker-section">
+
+        <div class="checker-card">
+
+            <div class="section-heading">
+
+                <h2>Causes & Risk Factors</h2>
+
+                <p>
+                    Cancer may develop due to environmental, genetic,
+                    and lifestyle-related factors.
+                </p>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>Smoking & Tobacco</h3>
+
+                    <p>
+                        Tobacco use significantly increases cancer risk.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Genetics</h3>
+
+                    <p>
+                        Family history may increase susceptibility to certain cancers.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Radiation & Pollution</h3>
+
+                    <p>
+                        Environmental exposure can damage healthy cells.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TYPES OF CANCER -->
+
+    <section class="info-section">
+
+        <div class="info-layout">
+
+            <div class="info-image">
+
+                <img src="{{ url_for('static', filename='images/cancer3.jpg') }}" alt="Cancer Treatment Illustration">
+
+            </div>
+
+            <div class="info-content">
+
+                <div class="section-heading left-align">
+
+                    <h2>Types of Cancer</h2>
+
+                </div>
+
+                <p>
+
+                    Cancer can affect almost any part of the body.
+                    Different cancers behave differently and require
+                    specific treatment approaches.
+
+                </p>
+
+                <p>
+
+                    Common categories include carcinoma, leukemia,
+                    lymphoma, melanoma, and sarcoma.
+
+                </p>
+
+                <p>
+
+                    Some cancers grow slowly while others spread rapidly,
+                    making early diagnosis extremely important.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TREATMENT -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Treatment Options</h2>
+
+            <p>
+                Cancer treatment depends on the type, stage,
+                and overall patient health.
+            </p>
+
+        </div>
+
+        <div class="tips-grid">
+
+            <div class="tip-card">
+
+                <h3>Chemotherapy</h3>
+
+                <p>
+                    Medicines are used to destroy cancer cells.
+                </p>
+
+            </div>
+
+            <div class="tip-card">
+
+                <h3>Radiation Therapy</h3>
+
+                <p>
+                    High-energy radiation targets cancerous tissues.
+                </p>
+
+            </div>
+
+            <div class="tip-card">
+
+                <h3>Surgery</h3>
+
+                <p>
+                    Tumors may be surgically removed when possible.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PREVENTION -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Prevention & Healthy Habits</h2>
+
+            <p>
+                Healthy lifestyle choices may help reduce cancer risk.
+            </p>
+
+        </div>
+
+        <div class="prevention-grid">
+
+            <div class="prevention-item">
+                ✔ Avoid tobacco products
+            </div>
+
+            <div class="prevention-item">
+                ✔ Maintain a healthy diet
+            </div>
+
+            <div class="prevention-item">
+                ✔ Exercise regularly
+            </div>
+
+            <div class="prevention-item">
+                ✔ Protect skin from UV exposure
+            </div>
+
+            <div class="prevention-item">
+                ✔ Attend regular screenings
+            </div>
+
+            <div class="prevention-item">
+                ✔ Limit alcohol consumption
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-container">
+
+            <details>
+
+                <summary>
+                    Can cancer be cured?
+                </summary>
+
+                <p>
+                    Some cancers can be successfully treated,
+                    especially when detected early.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Is cancer hereditary?
+                </summary>
+
+                <p>
+                    Certain cancers may be linked to inherited genetic factors.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Does lifestyle affect cancer risk?
+                </summary>
+
+                <p>
+                    Smoking, diet, exercise, and environmental exposure
+                    all influence cancer risk.
+                </p>
+
+            </details>
+
+        </div>
+
+    </section>
+
+    <!-- APPOINTMENT CTA -->
+
+    <section class="appointment-section">
+
+        <div class="result-card">
+
+            <p class="result-label">
+                Need Professional Medical Assistance?
+            </p>
+
+            <h2>
+                Consult an Oncology Specialist
+            </h2>
+
+            <p class="result-text">
+
+                Speak with a healthcare professional for cancer screening,
+                diagnosis, treatment guidance, and long-term support.
+
+            </p>
+
+            <div class="result-buttons">
+
+                <a href="#" class="primary-btn">
+                    Book Appointment
+                </a>
+
+                <a href="#" class="secondary-btn">
+                    Contact Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+  
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Healthcare Consultant
+
+            </h3>
+
+            <p>
+
+                Smart healthcare platform for
+                AI symptom analysis,
+                disease exploration,
+                prevention tips,
+                and appointment booking.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="/">Home</a>
+
+            <a href="#">Explore Diseases</a>
+
+            <a href="#">AI Symptoms Checker</a>
+
+            <a href="#">Book Appointment</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Resources
+
+            </h3>
+
+            <a href="#">Health Tips</a>
+
+         
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Contact
+
+            </h3>
+
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
+
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
+
+            <p>Bangkok, Thailand</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            &copy; 2026 Healthcare Consultant
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

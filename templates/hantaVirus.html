@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hantavirus Information</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='sCheck.css') }}">
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <a href="HOME.html" class="logo">
+        Health<span>Care</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="HOME.html">Home</a>
+
+        <a href="Diseases A-F.html">Diseases A–F</a>
+        <a href="Diseases G - L.html">Diseases G–L</a>
+        <a href="Diseases M - R.html">Diseases M–R</a>
+        <a href="Diseases S - Z.html">Diseases S–Z</a>
+        <a href="symptomsChecker.html">AI Symptoms Checker</a>
+        <a href="hantaVirus.html">Hanta Virus</a>
+        <a href="diabetesD.html">Diabetes</a>
+        <a href="CancerD.html">Cancer</a>
+        <a href="asthmaD.html">Asthma</a>   
+        <a href="HealthTip1.html">Health Tips</a>
+        <a href="#">Prevention & Care</a>
+        <a href="commonFAQ.html">FAQs</a>
+        <a href="#">Book Appointment</a>
+        <a href="ContactUS.html">About & Contact</a>
+
+    </div>
+
+</nav>
+    <!-- HERO SECTION -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    INFECTIOUS DISEASE HEALTHCARE
+                </p>
+
+                <h1>
+                    Understanding <span>Hantavirus</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Hantavirus is a rare but serious viral infection spread mainly
+                    through contact with infected rodents and their droppings.
+                    Learn about symptoms, transmission, prevention methods,
+                    and current medical understanding of the disease.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="primary-btn">
+                        Book Appointment
+                    </a>
+
+                    <a href="#symptoms" class="secondary-btn">
+                        Learn Symptoms
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="{{ url_for('static', filename='images/Hanta1.jpg') }}" alt="Hantavirus Illustration">
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- QUICK FACTS -->
+
+    <section class="checker-section">
+
+        <div class="checker-card">
+
+            <div class="section-heading">
+
+                <h2>Hantavirus Quick Facts</h2>
+
+                <p>
+                    Important information about hantavirus infection and transmission.
+                </p>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>Rare Viral Disease</h3>
+
+                    <p>
+                        Hantavirus infections are uncommon but can become severe.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Rodent Transmission</h3>
+
+                    <p>
+                        The virus mainly spreads through infected rodents and contaminated environments.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Respiratory Impact</h3>
+
+                    <p>
+                        Severe cases may affect the lungs and breathing system.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHAT IS HANTAVIRUS -->
+
+    <section class="info-section" id="about">
+
+        <div class="info-layout">
+
+            <div class="info-content">
+
+                <div class="section-heading left-align">
+
+                    <h2>What is Hantavirus?</h2>
+
+                </div>
+
+                <p>
+
+                    Hantavirus refers to a group of viruses carried by certain
+                    rodents. Humans may become infected after exposure to
+                    contaminated rodent urine, saliva, or droppings.
+
+                </p>
+
+                <p>
+
+                    In some cases, hantavirus can cause serious respiratory
+                    illness known as Hantavirus Pulmonary Syndrome (HPS),
+                    which may lead to severe breathing difficulties.
+
+                </p>
+
+                <p>
+
+                    The infection is considered rare, but early medical
+                    attention is important because symptoms may worsen rapidly.
+
+                </p>
+
+            </div>
+
+            <div class="info-image">
+
+                <img src="{{ url_for('static', filename='images/Hanta2.jpg') }}" alt="Hantavirus Illustration">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SYMPTOMS -->
+
+    <section class="checker-section" id="symptoms">
+
+        <div class="section-heading">
+
+            <h2>Common Symptoms</h2>
+
+            <p>
+                Early symptoms may resemble flu-like illnesses before becoming severe.
+            </p>
+
+        </div>
+
+        <div class="symptoms-grid">
+
+            <div class="symptom-card">
+                Fever
+            </div>
+
+            <div class="symptom-card">
+                Muscle Pain
+            </div>
+
+            <div class="symptom-card">
+                Fatigue
+            </div>
+
+            <div class="symptom-card">
+                Headache
+            </div>
+
+            <div class="symptom-card">
+                Shortness of Breath
+            </div>
+
+            <div class="symptom-card">
+                Nausea & Vomiting
+            </div>
+
+        </div>
+
+        <div class="warning-box">
+
+            ⚠ Research on hantavirus transmission, treatment methods,
+            and long-term effects is still ongoing. Immediate medical care
+            is strongly recommended if severe breathing symptoms develop.
+
+        </div>
+
+    </section>
+
+    <!-- HOW TRANSMISSION HAPPENS -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>How Hantavirus Spreads</h2>
+
+            <p>
+                Infection usually occurs through exposure to contaminated environments.
+            </p>
+
+        </div>
+
+        <div class="process-steps">
+
+            <div class="step-box">
+
+                <span>1</span>
+
+                <h3>Rodent Infection</h3>
+
+                <p>
+                    Certain wild rodents naturally carry hantaviruses.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>2</span>
+
+                <h3>Environmental Contamination</h3>
+
+                <p>
+                    Rodent droppings, urine, or saliva contaminate surfaces.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>3</span>
+
+                <h3>Human Exposure</h3>
+
+                <p>
+                    People inhale contaminated particles from the environment.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>4</span>
+
+                <h3>Infection Development</h3>
+
+                <p>
+                    Symptoms may appear after the virus enters the body.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RISK FACTORS -->
+
+    <section class="checker-section">
+
+        <div class="checker-card">
+
+            <div class="section-heading">
+
+                <h2>Risk Factors</h2>
+
+                <p>
+                    Certain environments and activities may increase exposure risk.
+                </p>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>Rodent Exposure</h3>
+
+                    <p>
+                        Areas with high rodent activity increase infection risk.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Cleaning Enclosed Areas</h3>
+
+                    <p>
+                        Sweeping contaminated spaces may release infected particles.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Rural Environments</h3>
+
+                    <p>
+                        Farms, cabins, and storage areas may contain infected rodents.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DIAGNOSIS -->
+
+    <section class="info-section">
+
+        <div class="info-layout">
+
+            <div class="info-image">
+
+                <img src="{{ url_for('static', filename='images/Hanta3.jpg') }}" alt="Medical Laboratory">
+
+            </div>
+
+            <div class="info-content">
+
+                <div class="section-heading left-align">
+
+                    <h2>Diagnosis & Medical Care</h2>
+
+                </div>
+
+                <p>
+
+                    Doctors diagnose hantavirus using symptom history,
+                    laboratory testing, and evaluation of possible exposure
+                    to rodents or contaminated environments.
+
+                </p>
+
+                <p>
+
+                    Severe cases may require hospitalization and respiratory
+                    support because breathing complications can develop quickly.
+
+                </p>
+
+                <p>
+
+                    Early diagnosis improves the chances of receiving
+                    proper supportive medical treatment.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TREATMENT -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Treatment Options</h2>
+
+            <p>
+                There is currently no specific cure for hantavirus infection.
+            </p>
+
+        </div>
+
+        <div class="tips-grid">
+
+            <div class="tip-card">
+
+                <h3>Supportive Care</h3>
+
+                <p>
+                    Medical treatment focuses on managing symptoms and breathing.
+                </p>
+
+            </div>
+
+            <div class="tip-card">
+
+                <h3>Oxygen Therapy</h3>
+
+                <p>
+                    Severe respiratory cases may require oxygen support.
+                </p>
+
+            </div>
+
+            <div class="tip-card">
+
+                <h3>Hospital Monitoring</h3>
+
+                <p>
+                    Continuous monitoring helps manage complications early.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PREVENTION -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Prevention & Safety</h2>
+
+            <p>
+                Preventing rodent exposure is the most important safety measure.
+            </p>
+
+        </div>
+
+        <div class="prevention-grid">
+
+            <div class="prevention-item">
+                ✔ Avoid contact with rodents
+            </div>
+
+            <div class="prevention-item">
+                ✔ Keep food sealed properly
+            </div>
+
+            <div class="prevention-item">
+                ✔ Ventilate enclosed spaces
+            </div>
+
+            <div class="prevention-item">
+                ✔ Use protective gloves when cleaning
+            </div>
+
+            <div class="prevention-item">
+                ✔ Disinfect contaminated surfaces
+            </div>
+
+            <div class="prevention-item">
+                ✔ Maintain clean living environments
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-container">
+
+            <details>
+
+                <summary>
+                    Is hantavirus contagious between people?
+                </summary>
+
+                <p>
+                    Most hantavirus types are not commonly spread from person to person.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Can hantavirus be treated?
+                </summary>
+
+                <p>
+                    There is no specific cure, but supportive medical care is important.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    How can exposure be prevented?
+                </summary>
+
+                <p>
+                    Preventing contact with rodents and contaminated areas reduces risk.
+                </p>
+
+            </details>
+
+        </div>
+
+    </section>
+
+    <!-- APPOINTMENT CTA -->
+
+    <section class="appointment-section">
+
+        <div class="result-card">
+
+            <p class="result-label">
+                Need Professional Medical Assistance?
+            </p>
+
+            <h2>
+                Consult a Healthcare Specialist
+            </h2>
+
+            <p class="result-text">
+
+                Speak with a healthcare professional if you experience
+                respiratory symptoms after possible rodent exposure.
+
+            </p>
+
+            <div class="result-buttons">
+
+                <a href="#" class="primary-btn">
+                    Book Appointment
+                </a>
+
+                <a href="#" class="secondary-btn">
+                    Contact Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Healthcare Consultant | Educational Healthcare Website
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Healthcare Consultant</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='HomeStyle.css') }}">
+
+</head>
+
+<body>
+
+
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <div class="top-content">
+
+        AI Symptom Checker Now Available •
+        Book Appointments Easily •
+        Explore Diseases & Treatments •
+        Smart Healthcare Assistance •
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="/" class="logo">
+
+        Health<span>Care</span>
+
+    </a>
+
+    
+
+
+<div class="nav-links">
+
+    <a href="/">Home</a>
+
+    <a href="/explore-diseases">
+        Diseases
+    </a>
+
+    <!-- COMMON DISEASES DROPDOWN -->
+    <div class="dropdown">
+
+        <a href="#">
+            Common Diseases
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="/diabetes">
+                Diabetes
+            </a>
+
+            <a href="/cancer">
+                Cancer
+            </a>
+
+            <a href="/asthma">
+                Asthma
+            </a>
+
+        </div>
+
+    </div>
+
+
+      <a href="/HealthTip1">
+        Health Tip
+    </a>
+    <a href="/appointment">
+        Appointment
+    </a>
+
+  
+
+</div>
+
+<div class="nav-buttons">
+
+    <a href="/symptom-checker" class="ai-btn">
+
+        AI Checker
+
+    </a>
+
+    <a href="/login" class="login-btn">
+
+        Login
+
+    </a>
+
+    <a href="/signup" class="signup-btn">
+
+        Sign Up
+
+    </a>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+
+
+    <!-- HEARTBEAT -->
+
+    <div class="heartbeat-container">
+
+        <svg viewBox="0 0 1200 200"
+        class="heartbeat-line">
+
+            <path d="
+            M0 100
+            L150 100
+            L180 60
+            L210 140
+            L240 40
+            L270 100
+            L420 100
+            L450 70
+            L480 130
+            L510 50
+            L540 100
+            L1200 100"
+            />
+
+        </svg>
+
+    </div>
+
+
+
+
+
+    <!-- LEFT HERO -->
+
+    <div class="hero-text">
+
+
+        <div class="hero-tag">
+
+            AI Powered Healthcare Platform
+
+        </div>
+
+
+
+        <h1>
+
+            Smart Healthcare
+            For Everyone.
+
+        </h1>
+
+
+
+        <p>
+
+            Analyze symptoms with AI,
+            explore diseases,
+            discover prevention tips,
+            and book appointments
+            through one modern healthcare platform.
+
+        </p>
+
+
+
+
+        <div class="hero-buttons">
+
+            <a href="/symptom-checker"
+            class="button">
+
+                Try AI Checker
+
+            </a>
+
+
+
+            <a href="/explore-diseases"
+            class="button2">
+
+                Explore Diseases
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- RIGHT HERO -->
+
+    <div class="hero-image">
+
+
+        <div class="gradient-circle"></div>
+
+
+
+        <div class="floating-card card1">
+
+            AI Analysis
+
+        </div>
+
+
+
+        <div class="floating-card card2">
+
+            Disease Insights
+
+        </div>
+
+
+
+        <div class="floating-card card3">
+
+            Health Tips
+
+        </div>
+
+
+
+        <img src="{{ url_for('static', filename='images/Gemini_hOME-removebg-preview.png') }}" alt="logo">
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- AI SECTION -->
+
+<section class="ai-section">
+
+
+
+    <div class="section-title">
+
+        <h2>
+
+            AI Symptoms Checker
+
+        </h2>
+
+        <p>
+
+            Discover possible conditions using smart AI healthcare assistance.
+
+        </p>
+
+    </div>
+
+
+
+
+
+    <div class="ai-card">
+
+
+
+        <!-- LEFT -->
+
+        <div class="ai-left">
+
+
+            <div class="ai-small-tag">
+
+                AI Detection System
+
+            </div>
+
+
+
+            <h3>
+
+                Analyze Symptoms Instantly
+
+            </h3>
+
+
+
+            <p>
+
+                Get fast AI-powered health insights
+                based on symptoms and conditions.
+
+            </p>
+
+
+
+
+            <div class="symptoms">
+
+                <span>Fever</span>
+
+                <span>Cough</span>
+
+                <span>Headache</span>
+
+                <span>Chest Pain</span>
+
+            </div>
+
+
+
+
+            <a href="#"
+            class="button">
+
+                Analyze Symptoms
+
+            </a>
+
+        </div>
+
+
+
+
+
+        <!-- RIGHT -->
+
+        <div class="ai-right">
+
+
+            <div class="glass-box">
+
+                <h4>
+
+                    AI Processing...
+
+                </h4>
+
+
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+
+
+                <p>
+
+                    92% Match Found
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mini-info">
+
+                ✔ Real-Time Analysis
+
+            </div>
+
+
+
+            <div class="mini-info">
+
+                ✔ Smart Health Insights
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- BOOK APPOINTMENT -->
+
+<section class="appointment-section">
+
+
+
+    <!-- LEFT IMAGE -->
+
+    <div class="appointment-image">
+
+
+        <!-- IMAGE PLACEHOLDER -->
+
+        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1200&auto=format&fit=crop">
+
+
+        <div class="image-overlay"></div>
+
+    </div>
+
+
+
+
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="appointment-content">
+
+
+        <div class="appointment-tag">
+
+            Healthcare Appointment System
+
+        </div>
+
+
+
+        <h2>
+
+            Book Doctor Appointments
+            Easily & Quickly
+
+        </h2>
+
+
+
+        <p>
+
+            Connect with healthcare professionals
+            through our simple and modern appointment platform.
+
+        </p>
+
+
+
+
+        <!-- SMALL IMAGE BOXES -->
+
+        <div class="small-images">
+
+
+            <div class="small-box">
+
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop">
+
+            </div>
+
+
+
+            <div class="small-box">
+
+                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=1200&auto=format&fit=crop">
+
+            </div>
+
+        </div>
+
+
+
+
+        <a href="#"
+        class="button">
+
+            Book Appointment
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+
+            🧠
+
+        </div>
+
+        <h3>
+
+            AI Symptoms Checker
+
+        </h3>
+
+        <p>
+
+            Analyze symptoms instantly
+            and discover possible conditions.
+
+        </p>
+
+    </div>
+
+
+
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+
+            📚
+
+        </div>
+
+        <h3>
+
+            Explore Diseases
+
+        </h3>
+
+        <p>
+
+            Browse diseases,
+            symptoms, treatments, and causes.
+
+        </p>
+
+    </div>
+
+
+
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+
+            🩺
+
+        </div>
+
+        <h3>
+
+            Prevention & Care
+
+        </h3>
+
+        <p>
+
+            Learn healthy habits and
+            preventive healthcare methods.
+
+        </p>
+
+    </div>
+
+
+
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+
+            📅
+
+        </div>
+
+        <h3>
+
+            Book Appointment
+
+        </h3>
+
+        <p>
+
+            Schedule doctor appointments
+            through a simple booking system.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Healthcare Consultant
+
+            </h3>
+
+            <p>
+
+                Smart healthcare platform for
+                AI symptom analysis,
+                disease exploration,
+                prevention tips,
+                and appointment booking.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="/">Home</a>
+
+            <a href="/explore-diseases">Explore Diseases</a>
+
+            <a href="/symptom-checker">AI Symptoms Checker</a>
+
+            <a href="#">Book Appointment</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Resources
+
+            </h3>
+
+            <a href="#">Health Tips</a>
+
+         
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Contact
+
+            </h3>
+
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
+
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
+
+            <p>Bangkok, Thailand</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            &copy; 2026 Healthcare Consultant
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Symptoms Checker</title>
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='sCheck.css') }}">
+<!-- <link rel="stylesheet" href="static/sCheck.css"> -->
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+  
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="/" class="logo">
+
+        Health<span>Care</span>
+
+    </a>
+
+
+
+    
+
+
+<div class="nav-links">
+
+    <a href="/">Home</a>
+
+    <a href="/explore-diseases">
+        Diseases
+    </a>
+
+    <!-- COMMON DISEASES DROPDOWN -->
+    <div class="dropdown">
+
+        <a href="#">
+            Common Diseases
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="/diabetes">
+                Diabetes
+            </a>
+
+            <a href="/cancer">
+                Cancer
+            </a>
+
+            <a href="/asthma">
+                Asthma
+            </a>
+
+        </div>
+
+    </div>
+
+    <a href="/appointment">
+        Appointment
+    </a>
+
+    <a href="/contact">
+        Contact
+    </a>
+
+</div>
+
+<div class="nav-buttons">
+
+    <a href="/symptom-checker" class="ai-btn">
+
+        AI Checker
+
+    </a>
+
+    <a href="/login" class="login-btn">
+
+        Login
+
+    </a>
+
+    <a href="/signup" class="signup-btn">
+
+        Sign Up
+
+    </a>
+
+</div>
+
+</nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    AI-Powered Healthcare
+                </p>
+
+                <h1>
+                    Smart Symptoms <span>Checker</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Select your symptoms and discover possible health conditions
+                    instantly with our intelligent healthcare assistant.
+
+                </p>
+
+                <a href="#checker" class="hero-btn">
+                    Start Symptom Analysis
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/healthcare.avif') }}"
+                    alt="Healthcare Illustration"
+                >
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- SYMPTOMS CHECKER -->
+        <section class="checker-section" id="checker">
+
+            <div class="section-heading">
+
+                <h2>Symptoms Checker</h2>
+
+                <p>
+                    Select the symptoms you are currently experiencing.
+                </p>
+
+            </div>
+
+            <div class="checker-card">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="symptom-search"
+                        placeholder="Search symptoms..."
+                        autocomplete="off"
+                    >
+
+                    <div id="search-suggestions" class="search-suggestions"></div>
+
+                </div>
+
+             
+
+                    <!-- SYMPTOMS GRID -->
+                     <br>
+<div class="symptoms-grid" id="symptoms-grid">
+
+</div>
+
+<!-- PAGINATION -->
+<div class="pagination">
+
+    <button id="prev-page">
+        ← Previous
+    </button>
+
+    <p id="page-number">
+        Page 1
+    </p>
+
+    <button id="next-page">
+        Next →
+    </button>
+
+</div>
+
+                    <!-- COMMON SYMPTOMS
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="high_fever">
+                        Fever
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="headache">
+                        Headache
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="fatigue">
+                        Fatigue
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="vomiting">
+                        Vomiting
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="cough">
+                        Cough
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="chest_pain">
+                        Chest Pain
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="dizziness">
+                        Dizziness
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="throat_irritation">
+                        Sore Throat
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="breathlessness">
+                        Shortness of Breath
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="skin_rash">
+                        Skin Rash
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="nausea">
+                        Nausea
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="muscle_pain">
+                        Muscle Pain
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="joint_pain">
+                        Joint Pain
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="abdominal_pain">
+                        Abdominal Pain
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="diarrhoea">
+                        Diarrhoea
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="runny_nose">
+                        Runny Nose
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="congestion">
+                        Congestion
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="sweating">
+                        Sweating
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="chills">
+                        Chills
+                    </label>
+
+                    <label class="symptom-item">
+                        <input type="checkbox" value="loss_of_balance">
+                        Loss of Balance
+                    </label>
+
+                     EXTRA SYMPTOMS -->
+<!-- 
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="itching">
+                        Itching
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="acidity">
+                        Acidity
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="anxiety">
+                        Anxiety
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="weight_loss">
+                        Weight Loss
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="lethargy">
+                        Lethargy
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="dehydration">
+                        Dehydration
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="back_pain">
+                        Back Pain
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="neck_pain">
+                        Neck Pain
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="cramps">
+                        Cramps
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="obesity">
+                        Obesity
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="depression">
+                        Depression
+                    </label>
+
+                    <label class="symptom-item extra-symptom">
+                        <input type="checkbox" value="irritability">
+                        Irritability
+                    </label>
+
+                </div> --> 
+
+                <!-- SELECTED SYMPTOMS -->
+                <div class="selected-box">
+
+                    <h3>Selected Symptoms</h3>
+
+                    <div class="selected-tags" id="selected-tags">
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+                <div class="button-area">
+
+                    <button class="predict-btn">
+
+                        Analyze Symptoms
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- RESULT -->
+        <section class="result-section">
+
+            <div class="result-card">
+
+                <p class="result-label">
+                    Possible Condition
+                </p>
+
+                <div id="loading-spinner" class="loading-spinner"></div>
+
+                <h2 id="prediction-result">
+                
+                    No Prediction Yet
+                </h2>
+
+                <p class="result-text">
+
+                    This AI-generated result is based on the symptoms selected.
+                    Please consult a healthcare professional for proper diagnosis.
+
+                </p>
+
+                <div class="result-buttons">
+
+                    <a href="#" class="primary-btn">
+                        Book Appointment
+                    </a>
+
+                    <!-- <a href="#" class="secondary-btn">
+                        Learn More
+                    </a> -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- HEALTH TIPS -->
+        <section class="tips-section">
+
+            <div class="tips-container">
+
+                <h2>Health Tips</h2>
+
+                <div class="tips-grid">
+
+                    <article class="tip-card">
+
+                        <h3>Stay Hydrated</h3>
+
+                        <p>
+
+                            Drink enough water throughout the day to support
+                            overall health and body functions.
+
+                        </p>
+
+                    </article>
+
+                    <article class="tip-card">
+
+                        <h3>Regular Exercise</h3>
+
+                        <p>
+
+                            Physical activity improves heart health,
+                            immunity, and mental well-being.
+
+                        </p>
+
+                    </article>
+
+                    <article class="tip-card">
+
+                        <h3>Healthy Diet</h3>
+
+                        <p>
+
+                            Eat balanced meals rich in vitamins,
+                            protein, and nutrients.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DISCLAIMER -->
+        <aside class="warning-box">
+
+            <p>
+
+                ⚠ This platform does not replace professional medical advice.
+                If symptoms are severe, contact emergency healthcare services immediately.
+
+            </p>
+
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 HealthCare Consultant | All Rights Reserved
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

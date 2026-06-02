@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asthma Information</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='sCheck.css') }}">
+
+</head>
+
+<body>
+
+     
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="/" class="logo">
+
+        Health<span>Care</span>
+
+    </a>
+
+
+
+    
+
+
+<div class="nav-links">
+
+    <a href="/">Home</a>
+
+    <a href="/explore-diseases">
+        Diseases
+    </a>
+
+    <!-- COMMON DISEASES DROPDOWN -->
+    <div class="dropdown">
+
+        <a href="#">
+            Common Diseases
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="/diabetes">
+                Diabetes
+            </a>
+
+            <a href="/cancer">
+                Cancer
+            </a>
+
+            <a href="/asthma">
+                Asthma
+            </a>
+
+        </div>
+
+    </div>
+
+    <a href="/appointment">
+        Appointment
+    </a>
+
+    <a href="/contact">
+        Contact
+    </a>
+
+</div>
+
+<div class="nav-buttons">
+
+    <a href="/symptom-checker" class="ai-btn">
+
+        AI Checker
+
+    </a>
+
+    <a href="/login" class="login-btn">
+
+        Login
+
+    </a>
+
+    <a href="/signup" class="signup-btn">
+
+        Sign Up
+
+    </a>
+
+</div>
+
+</nav>
+    <!-- HERO SECTION -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    RESPIRATORY HEALTHCARE
+                </p>
+
+                <h1>
+                    Understanding <span>Asthma</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Asthma is a chronic respiratory disease that affects
+                    the airways and breathing. Learn about symptoms,
+                    causes, treatments, prevention methods, and how
+                    asthma impacts daily life.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="primary-btn">
+                        Book Appointment
+                    </a>
+
+                    <a href="#symptoms" class="secondary-btn">
+                        Learn Symptoms
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <!-- <img src="images/asthma2.jpg" alt="Asthma Illustration"> -->
+        <img src="{{ url_for('static', filename='images/asthma2.jpg') }}" alt="asthma Illustration">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- QUICK FACTS -->
+
+    <section class="checker-section">
+
+        <div class="checker-card">
+
+            <div class="section-heading">
+
+                <h2>Asthma Quick Facts</h2>
+
+                <p>
+                    Important information about asthma and respiratory health.
+                </p>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>Chronic Condition</h3>
+
+                    <p>
+                        Asthma is a long-term disease affecting the airways.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Breathing Difficulty</h3>
+
+                    <p>
+                        Airways become inflamed and narrowed during attacks.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Manageable</h3>
+
+                    <p>
+                        Symptoms can often be controlled with treatment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHAT IS ASTHMA -->
+
+    <section class="info-section">
+
+        <div class="info-layout">
+
+            <div class="info-content">
+
+                <div class="section-heading left-align">
+
+                    <h2>What is Asthma?</h2>
+
+                </div>
+
+                <p>
+
+                    Asthma is a condition where the airways inside the lungs
+                    become swollen, sensitive, and narrow. This makes it
+                    difficult for air to move in and out of the lungs properly.
+
+                </p>
+
+                <p>
+
+                    People with asthma may experience wheezing,
+                    coughing, chest tightness, and shortness of breath.
+                    Symptoms can vary from mild discomfort to severe
+                    breathing emergencies.
+
+                </p>
+
+                <p>
+
+                    Asthma attacks are often triggered by allergens,
+                    smoke, dust, exercise, cold air, or respiratory infections.
+
+                </p>
+
+            </div>
+
+            <div class="info-image">
+
+                <!-- <img src="images/asthama1.jpg" alt="Lungs Illustration"> -->
+        <img src="{{ url_for('static', filename='images/asthama1.jpg') }}" alt="Lungs Illustration">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COMMON SYMPTOMS -->
+
+    <section class="checker-section" id="symptoms">
+
+        <div class="section-heading">
+
+            <h2>Common Symptoms</h2>
+
+            <p>
+                Asthma symptoms can vary depending on severity and triggers.
+            </p>
+
+        </div>
+
+        <div class="symptoms-grid">
+
+            <div class="symptom-card">
+                Shortness of Breath
+            </div>
+
+            <div class="symptom-card">
+                Wheezing
+            </div>
+
+            <div class="symptom-card">
+                Chest Tightness
+            </div>
+
+            <div class="symptom-card">
+                Persistent Coughing
+            </div>
+
+            <div class="symptom-card">
+                Breathing Difficulty
+            </div>
+
+            <div class="symptom-card">
+                Fatigue
+            </div>
+
+        </div>
+
+        <div class="warning-box">
+
+            ⚠ Severe breathing difficulty requires immediate medical attention.
+
+        </div>
+
+    </section>
+
+    <!-- HOW ASTHMA ATTACKS HAPPEN -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>How Asthma Attacks Happen</h2>
+
+            <p>
+                Asthma attacks occur through several stages inside the airways.
+            </p>
+
+        </div>
+
+        <div class="process-steps">
+
+            <div class="step-box">
+
+                <span>1</span>
+
+                <h3>Trigger Exposure</h3>
+
+                <p>
+                    Dust, smoke, pollen, or allergens enter the lungs.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>2</span>
+
+                <h3>Inflammation</h3>
+
+                <p>
+                    Airways become swollen and irritated.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>3</span>
+
+                <h3>Muscle Tightening</h3>
+
+                <p>
+                    Airway muscles tighten and reduce airflow.
+                </p>
+
+            </div>
+
+            <div class="step-box">
+
+                <span>4</span>
+
+                <h3>Breathing Difficulty</h3>
+
+                <p>
+                    Breathing becomes harder and symptoms appear.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CAUSES -->
+
+    <section class="checker-section">
+
+        <div class="checker-card">
+
+            <div class="section-heading">
+
+                <h2>Causes & Triggers</h2>
+
+                <p>
+                    Multiple environmental and lifestyle factors can trigger asthma.
+                </p>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>Environmental Factors</h3>
+
+                    <p>
+                        Pollution, pollen, dust, smoke, and weather changes
+                        can trigger asthma symptoms.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Medical Conditions</h3>
+
+                    <p>
+                        Allergies and respiratory infections may worsen asthma.
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>Lifestyle Triggers</h3>
+
+                    <p>
+                        Stress, strong smells, and physical activity may
+                        trigger breathing problems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TYPES OF ASTHMA -->
+
+    <section class="info-section">
+
+        <div class="info-layout">
+
+            <div class="info-image">
+
+                <img src="{{ url_for('static', filename='images/asthma3.webp') }}" alt="Asthma Inhaler">
+
+            </div>
+
+            <div class="info-content">
+
+                <div class="section-heading left-align">
+
+                    <h2>Types of Asthma</h2>
+
+                </div>
+
+                <p>
+
+                    Asthma can affect people differently depending on
+                    age, triggers, and severity levels.
+
+                </p>
+
+                <p>
+
+                    Common forms include allergic asthma,
+                    exercise-induced asthma, childhood asthma,
+                    and occupational asthma caused by workplace exposure.
+
+                </p>
+
+                <p>
+
+                    Understanding the specific type of asthma helps
+                    doctors recommend effective treatment plans.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TREATMENT -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Treatment Options</h2>
+
+            <p>
+                Asthma treatments focus on controlling symptoms and preventing attacks.
+            </p>
+
+        </div>
+
+        <div class="tips-grid">
+
+            <div class="tip-card">
+
+                <h3>Quick Relief Inhalers</h3>
+
+                <p>
+                    Help open the airways quickly during asthma attacks.
+                </p>
+
+            </div>
+
+            <div class="tip-card">
+
+                <h3>Long-Term Medication</h3>
+
+                <p>
+                    Reduces inflammation and prevents flare-ups.
+                </p>
+
+            </div>
+
+            <div class="tip-card">
+
+                <h3>Lifestyle Management</h3>
+
+                <p>
+                    Avoiding triggers and maintaining healthy habits improves control.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PREVENTION -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Prevention & Self-Care</h2>
+
+            <p>
+                Daily preventive habits can reduce asthma complications.
+            </p>
+
+        </div>
+
+        <div class="prevention-grid">
+
+            <div class="prevention-item">
+                ✔ Avoid smoke exposure
+            </div>
+
+            <div class="prevention-item">
+                ✔ Keep inhalers nearby
+            </div>
+
+            <div class="prevention-item">
+                ✔ Monitor breathing regularly
+            </div>
+
+            <div class="prevention-item">
+                ✔ Maintain clean indoor air
+            </div>
+
+            <div class="prevention-item">
+                ✔ Exercise carefully
+            </div>
+
+            <div class="prevention-item">
+                ✔ Visit doctors regularly
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="checker-section">
+
+        <div class="section-heading">
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-container">
+
+            <details>
+
+                <summary>
+                    Can asthma be cured?
+                </summary>
+
+                <p>
+                    Asthma usually cannot be cured completely,
+                    but symptoms can be controlled effectively.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Is asthma hereditary?
+                </summary>
+
+                <p>
+                    Genetics may increase the risk of developing asthma.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Can exercise trigger asthma?
+                </summary>
+
+                <p>
+                    Some people experience exercise-induced asthma symptoms.
+                </p>
+
+            </details>
+
+        </div>
+
+    </section>
+
+    <!-- APPOINTMENT CTA -->
+
+    <section class="appointment-section">
+
+        <div class="result-card">
+
+            <p class="result-label">
+                Need Professional Medical Assistance?
+            </p>
+
+            <h2>
+                Consult a Healthcare Specialist
+            </h2>
+
+            <p class="result-text">
+
+                Speak with a healthcare professional for proper
+                asthma diagnosis, treatment, and long-term management.
+
+            </p>
+
+            <div class="result-buttons">
+
+                <a href="#" class="primary-btn">
+                    Book Appointment
+                </a>
+
+                <a href="#" class="secondary-btn">
+                    Contact Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Healthcare Consultant
+
+            </h3>
+
+            <p>
+
+                Smart healthcare platform for
+                AI symptom analysis,
+                disease exploration,
+                prevention tips,
+                and appointment booking.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="#">Home</a>
+
+            <a href="#">Explore Diseases</a>
+
+            <a href="#">AI Symptoms Checker</a>
+
+            <a href="#">Book Appointment</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Resources
+
+            </h3>
+
+            <a href="#">Health Tips</a>
+
+         
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Contact
+
+            </h3>
+
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
+
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
+
+            <p>Bangkok, Thailand</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            &copy; 2026 Healthcare Consultant
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
