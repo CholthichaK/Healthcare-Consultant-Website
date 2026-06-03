@@ -150,6 +150,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="appointment.css">
 </head>
 <body>
+   <nav class="page-nav">
+  <a href="http://127.0.0.1:5000" class="nav-home">Home</a>
+</nav>
     <div class="form-container">
         <form action="appointment.php" method="post">
             <h2>Book an Appointment</h2>

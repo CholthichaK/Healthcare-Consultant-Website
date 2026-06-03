@@ -4,6 +4,29 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.page-nav {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 10;
+}
+
+.nav-home {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #7494ec;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(116, 148, 236, 0.3);
+  transition: 0.3s;
+}
+
+.nav-home:hover {
+  background: #5a7bd8;
+}
 body{
     width: 100%;
     display: grid;
@@ -63,3 +86,4 @@ button:hover{
 .form-container .date input{
     width: 100%;
 }
+

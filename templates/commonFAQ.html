@@ -5,39 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ session</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='commonFAQ.css') }}">
-    <link rel="icon" href="./FAQicon.png" type="image/png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Playwrite+DE+SAS:wght@200&family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
 </head>
 <body>
-   <nav class="navbar">
+   <nav>
 
-    <a href="HOME.html" class="logo">
+    <a href="/" class="logo">
+
         Health<span>Care</span>
+
     </a>
 
-    <div class="nav-links">
-        <a href="HOME.html">Home</a>
+    
 
-        <a href="Diseases A-F.html">Diseases A–F</a>
-        <a href="Diseases G - L.html">Diseases G–L</a>
-        <a href="Diseases M - R.html">Diseases M–R</a>
-        <a href="Diseases S - Z.html">Diseases S–Z</a>
-        <a href="symptomsChecker.html">AI Symptoms Checker</a>
-        <a href="hantaVirus.html">Hanta Virus</a>
-        <a href="diabetesD.html">Diabetes</a>
-        <a href="CancerD.html">Cancer</a>
-        <a href="asthmaD.html">Asthma</a>   
-        <a href="HealthTip1.html">Health Tips</a>
-        <a href="#">Prevention & Care</a>
-        <a href="commonFAQ.html">FAQs</a>
-        <a href="#">Book Appointment</a>
-        <a href="ContactUS.html">About & Contact</a>
+
+<div class="nav-links">
+
+    <a href="/">Home</a>
+
+    <a href="/explore-diseases">
+        Diseases
+    </a>
+
+    <!-- COMMON DISEASES DROPDOWN -->
+    <div class="dropdown">
+
+        <a href="#">
+            Common Diseases
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="/diabetes">
+                Diabetes
+            </a>
+
+            <a href="/cancer">
+                Cancer
+            </a>
+
+            <a href="/asthma">
+                Asthma
+            </a>
+
+        </div>
 
     </div>
 
+
+      <a href="/HealthTip1">
+        Health Tip
+    </a>
+    <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">
+        Appointment
+    </a>
+
+  
+
+</div>
+
+<div class="nav-buttons">
+
+    <a href="/symptom-checker" class="ai-btn">
+
+        AI Checker
+
+    </a>
+
+    <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="login-btn">
+
+        Login
+
+    </a>
+
+    <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="signup-btn">
+
+        Sign Up
+
+    </a>
+
+</div>
+
 </nav>
+
     <section>
         <div class="banner">
             <h1>Frequently Asked Questions</h1>
@@ -158,18 +211,115 @@
  </section>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<footer style="background-color: navy; color: white; text-align: center; padding: 20px;">
-     <p>Follow us on social media:</p>
-     <a href="https://www.facebook.com/yourhospital" style="color: white; margin: 0 10px;">Facebook</a>
-     <a href="https://www.twitter.com/yourhospital" style="color: white; margin: 0 10px;">Twitter</a>
-     <a href="https://www.instagram.com/yourhospital" style="color: white; margin: 0 10px;">Instagram</a>
-    <contact>
-        <h3>Contact Us</h3>
-        <p>Email: info@yourhospital.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </contact>
-      <p>&copy; 2023 Your Hospital. All rights reserved.</p>
+<footer>
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Healthcare Consultant
+
+            </h3>
+
+            <p>
+
+                Smart healthcare platform for
+                AI symptom analysis,
+                disease exploration,
+                prevention tips,
+                and appointment booking.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="/">Home</a>
+
+            <a href="/explore-diseases">Explore Diseases</a>
+
+            <a href="/symptom-checker">AI Symptoms Checker</a>
+
+           <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Resources
+
+            </h3>
+
+            <a href="/HealthTip1">Health Tips</a>
+
+            <a href="/faq">FAQs</a>
+
+            <a href="/prevention-care">Prevention & Care</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Contact
+
+            </h3>
+
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
+
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
+
+            <p>Bangkok, Thailand</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            &copy; 2026 Healthcare Consultant
+
+        </p>
+
+    </div>
+
 </footer>
+
+
+
 
 <script>
   const questions = document.querySelectorAll(".faq-question");

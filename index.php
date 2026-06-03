@@ -34,7 +34,9 @@ if (!in_array($next, $allowedNextPages, true)) {
 </head>
 <body>
     
-     
+     <nav class="page-nav">
+  <a href="http://127.0.0.1:5000" class="nav-home">Home</a>
+</nav>
 <div class="container">
 <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
     <form action="login_register.php" method="post">

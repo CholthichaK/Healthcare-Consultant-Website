@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import joblib
 import numpy as np
-
+import pandas as pd
 # Create Flask App
 app = Flask(__name__)
 
@@ -49,8 +49,15 @@ def asthma():
 
 
 @app.route("/HealthTip1")
-def contact():
+def health_tip1():
     return render_template("HealthTip1.html")
+@app.route("/faq")
+def faq():
+
+    return render_template("commonFAQ.html")
+@app.route("/contact")
+def contact_us():
+    return render_template("ContactUS.html")
 
 # ==============================
 # PREDICTION ROUTE
@@ -80,10 +87,11 @@ def predict():
                 index = symptom_columns.index(symptom)
 
                 symptom_vector[index] = 1
+                symptom_df = pd.DataFrame([symptom_vector], columns=symptom_columns)
 
-        symptom_vector = symptom_vector.reshape(1, -1)
+                prediction = model.predict(symptom_df)
 
-        prediction = model.predict(symptom_vector)
+       
 
         disease_name = encoder.inverse_transform(prediction)
 

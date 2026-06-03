@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact US</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='ContactUS.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='HomeStyle.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='ContactUS.css') }}">
 </head>
 <body>
-   <nav class="navbar">
-
-    <a href="HOME.html" class="logo">
-        Health<span>Care</span>
-    </a>
+  <nav>
+    <a href="/" class="logo">Health<span>Care</span></a>
 
     <div class="nav-links">
-        <a href="HOME.html">Home</a>
-
-        <a href="Diseases A-F.html">Diseases A–F</a>
-        <a href="Diseases G - L.html">Diseases G–L</a>
-        <a href="Diseases M - R.html">Diseases M–R</a>
-        <a href="Diseases S - Z.html">Diseases S–Z</a>
-        <a href="symptomsChecker.html">AI Symptoms Checker</a>
-        <a href="hantaVirus.html">Hanta Virus</a>
-        <a href="diabetesD.html">Diabetes</a>
-        <a href="CancerD.html">Cancer</a>
-        <a href="asthmaD.html">Asthma</a>   
-        <a href="HealthTip1.html">Health Tips</a>
-        <a href="#">Prevention & Care</a>
-        <a href="commonFAQ.html">FAQs</a>
-        <a href="#">Book Appointment</a>
-        <a href="ContactUS.html">About & Contact</a>
-
+      <a href="/">Home</a>
+      <a href="/explore-diseases">Diseases</a>
+      <a href="/HealthTip1">Health Tip</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact Us</a>
+      <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Appointment</a>
     </div>
 
-</nav>
-        <br><br>
-        <section>
-            <h1><b>How Can We Help?</b></h1>
-            <p> Get in touch with our sales and support teams.</p>
-        </section>
-        
+    <div class="nav-buttons">
+      <a href="/symptom-checker" class="ai-btn">AI Checker</a>
+      <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="login-btn">Login</a>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div class="contact-copy">
+        <p class="eyebrow">We are here to help</p>
+        <h1>Contact Us</h1>
+        <p>
+          Have questions about appointments, symptoms, or health services?
+          Send us a message and our healthcare support team will guide you.
+        </p>
+        <button id="knowMoreBtn" type="button">Know More</button>
+      </div>
+
+      <div class="contact-art">
+        <div class="phone-card">
+          <div class="phone-top"></div>
+          <div class="message-line long"></div>
+          <div class="message-line"></div>
+          <div class="message-line short"></div>
+          <div class="chat-dot"></div>
+        </div>
+        <div class="mail mail-one">@</div>
+        <div class="mail mail-two">@</div>
+      </div>
+    </section>
+
+    <section class="contact-details" id="contactDetails">
+      <div>
+        <h2>Get In Touch</h2>
+        <p>Email: healthcare@gmail.com</p>
+        <p>Phone: +66 123 456 789</p>
+        <p>Address: Healthcare Consultant Center, Bangkok</p>
+      </div>
+
+      <form action="http://localhost/Healthcare-Consultant-Website/contact_submit.php" method="post">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit">Send Message</button>
+    </form>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='ContactUS.js') }}"></script>
 </body>
 </html>

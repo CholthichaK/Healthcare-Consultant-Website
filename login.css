@@ -98,3 +98,40 @@ span{
   width:300px;
   margin: 0 auto;
 }
+.page-nav {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 10;
+}
+
+.nav-home {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #7494ec;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(116, 148, 236, 0.3);
+  transition: 0.3s;
+}
+
+.nav-home:hover {
+  background: #6884d3;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.user-actions .nav-home,
+.user-actions button {
+  width: 140px;
+  margin: 0;
+  text-align: center;
+}

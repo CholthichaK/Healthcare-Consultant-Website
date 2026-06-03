@@ -24,7 +24,10 @@ if(!isset($_SESSION['email']))
     <div class="box">
         <h1> Welcome,<span> <?= $_SESSION['name'];  ?></span></h1>
         <p> This is a <span>user</span> page.</p>
-        <button onclick="window.location.href='logout.php'">logout</button>
+        <div class="user-actions">
+  <a href="http://127.0.0.1:5000" class="nav-home">Home</a>
+  <button onclick="window.location.href='logout.php'">Logout</button>
+</div>
     </div>
 </body>
 </html>
