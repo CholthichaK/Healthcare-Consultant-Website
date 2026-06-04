@@ -1,0 +1,121 @@
+
+.info-page {
+  min-height: 100vh;
+  padding: 46px 8% 80px;
+  background: #f6fbff;
+}
+
+.info-hero {
+  max-width: 1180px;
+  margin: 0 auto 32px;
+  padding: 64px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #eaf4ff, #fff);
+  box-shadow: 0 24px 60px rgba(70, 110, 190, 0.14);
+}
+
+.eyebrow {
+  color: #7494ec;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.info-hero h1 {
+  font-size: 48px;
+  color: #10194e;
+  margin: 12px 0;
+}
+
+.info-hero p {
+  max-width: 720px;
+  color: #667085;
+  line-height: 1.8;
+}
+
+.doctor-grid,
+.value-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 32px;
+  
+}
+
+.doctor-card,
+.value-grid article {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(70, 110, 190, 0.12);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #7494ec;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.doctor-card h3,
+.value-grid h3 {
+  color: #10194e;
+  margin-bottom: 8px;
+}
+
+.doctor-card p,
+.value-grid p {
+  color: #667085;
+  line-height: 1.7;
+  
+}
+
+.doctor-card span {
+  display: inline-block;
+  margin-top: 14px;
+  color: #7494ec;
+  font-weight: 700;
+}
+.doctor-tools {
+  max-width: 1180px;
+  margin: 0 auto 24px;
+  display: flex;
+  gap: 14px;
+}
+
+.doctor-tools input,
+.doctor-tools select {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(70, 110, 190, 0.1);
+  font-size: 15px;
+}
+
+.doctor-tools input {
+  flex: 1;
+}
+
+.profile-btn,
+.book-btn {
+  display: inline-block;
+  margin-top: 16px;
+  margin-right: 8px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #7494ec;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.book-btn {
+  background: #0b8f6a;
+}

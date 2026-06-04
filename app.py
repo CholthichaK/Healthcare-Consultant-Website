@@ -61,7 +61,14 @@ def contact_us():
 @app.route("/prevention-care")
 def prevention_care():
     return render_template("PreventionCare.html")
+@app.route("/doctors")
+def doctors():
+    return render_template("Doctors.html")
 
+
+@app.route("/about")
+def about():
+    return render_template("AboutUs.html")
 # ==============================
 # PREDICTION ROUTE
 # ==============================

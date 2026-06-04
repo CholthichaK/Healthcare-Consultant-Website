@@ -24,7 +24,7 @@ const healthTips = [
     link: "https://www.bbc.com/future/article/20260409-want-a-better-nights-sleep-go-camping"
   },
   {
-    image: "/static/images/Overeating.png",
+    image: "/static/images/Eating.png",
     title: "Tips to Avoid Overeating",
     link: "https://www.houstonmethodist.org/blog/articles/2022/jan/how-to-stop-overeating-10-tips-to-avoid-eating-too-much/"
   },

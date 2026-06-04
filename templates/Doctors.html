@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+  <title>Doctors</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='HomeStyle.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='ContactUS.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='InfoPages.css') }}">
 </head>
 <body>
-
-
-<!-- NAVIGATION -->
-
 <nav>
 
     <a href="/" class="logo">
@@ -94,53 +89,59 @@
 
 
 
+<main class="info-page">
+  <section class="info-hero">
+    <p class="eyebrow">Healthcare Team</p>
+    <h1>Our Doctors</h1>
+    <p>Meet our healthcare specialists and choose the right department for your care.</p>
+  </section>
 
-  <main class="contact-page">
-    <section class="contact-hero">
-      <div class="contact-copy">
-        <p class="eyebrow">We are here to help</p>
-        <h1>Contact Us</h1>
-        <p>
-          Have questions about appointments, symptoms, or health services?
-          Send us a message and our healthcare support team will guide you.
-        </p>
-        <button id="knowMoreBtn" type="button">Know More</button>
-      </div>
-
-      <div class="contact-art">
-        <div class="phone-card">
-          <div class="phone-top"></div>
-          <div class="message-line long"></div>
-          <div class="message-line"></div>
-          <div class="message-line short"></div>
-          <div class="chat-dot"></div>
-        </div>
-        <div class="mail mail-one">@</div>
-        <div class="mail mail-two">@</div>
-      </div>
-    </section>
-
-    <section class="contact-details" id="contactDetails">
-      <div>
-        <h2>Get In Touch</h2>
-        <p>Email: healthcare@gmail.com</p>
-        <p>Phone: +66 123 456 789</p>
-        <p>Address: Healthcare Consultant Center, Bangkok</p>
-      </div>
-
-      <form action="http://localhost/Healthcare-Consultant-Website/contact_submit.php" method="post">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit">Send Message</button>
-    </form>
-    </section>
-  </main>
-
-
+<section class="doctor-tools">
+  <input id="doctorSearch" type="text" placeholder="Search doctor or specialty">
+  <select id="specialtyFilter">
+    <option value="all">All Specialties</option>
+    <option value="Cardiology">Cardiology</option>
+    <option value="Neurology">Neurology</option>
+    <option value="Pediatrics">Pediatrics</option>
+    <option value="Infectious Disease">Infectious Disease</option>
+  </select>
+</section class="doctor-grid">
+  <article class="doctor-card" data-name="Dr. Aye Myint" data-specialty="Cardiology">
+  <div class="avatar">AM</div>
+  <h3>Dr. Aye Myint</h3>
+  <p>Cardiology</p>
+  <span>Available: Mon, Wed, Fri</span>
+  <button class="profile-btn">View Profile</button>
+  <a class="book-btn" href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
   
+</article>
+<article class="doctor-card" data-name="Dr. Khin Lin" data-specialty="Neurology">
+      <div class="avatar">KL</div>
+      <h3>Dr. Khin Lin</h3>
+      <p>Neurology</p>
+      <span>Available: Tue, Thu</span>
+      <button class="profile-btn">View Profile</button>
+      <a class="book-btn" href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+    </article>
+     <article class="doctor-card" data-name="Dr. Sarah Tun" data-specialty="Pediatrics">
+      <div class="avatar">ST</div>
+      <h3>Dr. Sarah Tun</h3>
+      <p>Pediatrics</p>
+      <span>Available: Mon to Fri</span>
+      <button class="profile-btn">View Profile</button>
+      <a class="book-btn" href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+    </article>
 
-
+    <article class="doctor-card" data-name="Dr. Nay Min" data-specialty="Infectious Disease">
+      <div class="avatar">NM</div>
+      <h3>Dr. Nay Min</h3>
+      <p>Infectious Disease</p>
+      <span>Available: Wed, Sat</span>
+      <button class="profile-btn">View Profile</button>
+      <a class="book-btn" href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+    </article>
+    </section>
+</main>
 <!-- FOOTER -->
 
 <footer>
@@ -252,9 +253,6 @@
     </div>
 
 </footer>
-
-
-
-  <script src="{{ url_for('static', filename='ContactUS.js') }}"></script>
+<script src="{{ url_for('static', filename='Doctors.js') }}"></script>
 </body>
 </html>
