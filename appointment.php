@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
    <nav class="page-nav">
-  <a href="http://127.0.0.1:5000" class="nav-home">Home</a>
+  <a href="http://127.0.0.1:5001" class="nav-home">Home</a>
 </nav>
     <div class="form-container">
         <form action="appointment.php" method="post">

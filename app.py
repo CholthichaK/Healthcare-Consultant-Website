@@ -58,6 +58,9 @@ def faq():
 @app.route("/contact")
 def contact_us():
     return render_template("ContactUS.html")
+@app.route("/prevention-care")
+def prevention_care():
+    return render_template("PreventionCare.html")
 
 # ==============================
 # PREDICTION ROUTE
@@ -110,4 +113,4 @@ def predict():
 # ==============================
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=5001)

@@ -25,7 +25,7 @@ if(!isset($_SESSION['email']))
         <h1> Welcome,<span> <?= $_SESSION['name'];  ?></span></h1>
         <p> This is an <span>admin</span> page.</p>
         <div class="user-actions">
-  <a href="http://127.0.0.1:5000" class="nav-home">Home</a>
+  <a href="http://127.0.0.1:5001" class="nav-home">Home</a>
   <button onclick="window.location.href='logout.php'">Logout</button>
 </div>
     </div>

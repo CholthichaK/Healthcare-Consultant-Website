@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: http://127.0.0.1:5000/contact');
+    header('Location: http://127.0.0.1:5001/contact');
     exit();
 }
 

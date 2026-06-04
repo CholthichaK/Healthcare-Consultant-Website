@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevention & Care</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='HomeStyle.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='PreventionCare.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Health<span>Care</span></a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/explore-diseases">Diseases</a>
+      <div class="dropdown">
+        <a href="#">Common Diseases</a>
+        <div class="dropdown-content">
+          <a href="/diabetes">Diabetes</a>
+          <a href="/cancer">Cancer</a>
+          <a href="/asthma">Asthma</a>
+        </div>
+      </div>
+      <a href="/HealthTip1">Health Tip</a>
+      <a href="/prevention-care">Prevention & Care</a>
+      <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Appointment</a>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="/symptom-checker" class="ai-btn">AI Checker</a>
+      <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="login-btn">Login</a>
+    </div>
+  </nav>
+
+  <main class="prevention-page">
+    <section class="prevention-hero">
+      <div>
+        <p class="eyebrow">Patient Guidance</p>
+        <h1>Prevention & Care</h1>
+        <p>Simple daily habits and clear care steps to help you stay healthier, manage common symptoms, and know when to seek medical support.</p>
+        <a href="#warning" class="hero-action">Emergency Signs</a>
+      </div>
+    </section>
+
+    <section class="care-tabs">
+      <button class="tab active" data-target="daily">Daily Prevention</button>
+      <button class="tab" data-target="home">Home Care</button>
+      <button class="tab" data-target="doctor">See a Doctor</button>
+      <button class="tab" data-target="category">Care by Category</button>
+    </section>
+
+    <section class="care-panel active" id="daily">
+      <article><h3>Hand Washing</h3><p>Wash hands often with soap, especially before eating and after coughing, sneezing, or going outside.</p></article>
+      <article><h3>Healthy Eating</h3><p>Choose fruits, vegetables, whole grains, lean proteins, and limit sugary drinks.</p></article>
+      <article><h3>Exercise</h3><p>Aim for light movement daily, such as walking, stretching, or simple home exercises.</p></article>
+      <article><h3>Sleep & Hydration</h3><p>Get enough rest and drink water regularly to support recovery and energy.</p></article>
+      <article><h3>Vaccination Reminders</h3><p>Keep routine vaccines updated and ask a doctor which vaccines are right for you.</p></article>
+    </section>
+
+    <section class="care-panel" id="home">
+      <article><h3>Fever</h3><p>Rest, drink fluids, wear light clothing, and monitor temperature. Avoid taking medicine without proper guidance.</p></article>
+      <article><h3>Cough or Cold</h3><p>Drink warm fluids, rest, and avoid close contact with others if symptoms may be infectious.</p></article>
+      <article><h3>When to Rest</h3><p>Rest when symptoms are strong, when you feel weak, or when sleep is poor.</p></article>
+      <article><h3>When to Drink More</h3><p>Increase fluids during fever, sweating, vomiting, diarrhea, or hot weather.</p></article>
+    </section>
+
+    <section class="care-panel" id="doctor">
+      <article><h3>High Fever</h3><p>Seek help if fever is very high, lasts more than three days, or comes with severe symptoms.</p></article>
+      <article><h3>Chest Pain</h3><p>Chest pain should be checked quickly, especially with sweating, nausea, or shortness of breath.</p></article>
+      <article><h3>Breathing Difficulty</h3><p>Get urgent care if breathing becomes hard, noisy, painful, or unusually fast.</p></article>
+      <article><h3>Long-lasting Symptoms</h3><p>Book an appointment if symptoms do not improve or keep returning.</p></article>
+    </section>
+
+    <section class="care-panel" id="category">
+      <article><h3>Children</h3><p>Watch hydration, fever, breathing, and behavior changes closely.</p></article>
+      <article><h3>Elderly People</h3><p>Pay attention to weakness, confusion, falls, appetite changes, and medication side effects.</p></article>
+      <article><h3>Chronic Disease Patients</h3><p>Follow regular medication plans and check symptoms early.</p></article>
+      <article><h3>Pregnant People</h3><p>Contact a healthcare provider for unusual pain, bleeding, swelling, fever, or reduced movement.</p></article>
+    </section>
+
+    <section class="warning-box" id="warning">
+      <h2>Emergency Warning Signs</h2>
+      <p>Seek urgent medical care for severe chest pain, serious breathing difficulty, fainting, stroke-like symptoms, severe allergic reaction, heavy bleeding, or sudden confusion.</p>
+      <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+    </section>
+  </main>
+  <footer>
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Healthcare Consultant
+
+            </h3>
+
+            <p>
+
+                Smart healthcare platform for
+                AI symptom analysis,
+                disease exploration,
+                prevention tips,
+                and appointment booking.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="/">Home</a>
+
+            <a href="/explore-diseases">Explore Diseases</a>
+
+            <a href="/symptom-checker">AI Symptoms Checker</a>
+
+           <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Resources
+
+            </h3>
+
+            <a href="/HealthTip1">Health Tips</a>
+
+            <a href="/faq">FAQs</a>
+
+            <a href="/prevention-care">Prevention & Care</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Contact
+
+            </h3>
+            <a href="/contact">Contact</a>
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
+
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
+
+            <p>Bangkok, Thailand</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            &copy; 2026 Healthcare Consultant
+
+        </p>
+
+    </div>
+
+</footer>
+
+  <script src="{{ url_for('static', filename='PreventionCare.js') }}"></script>
+</body>
+</html>
