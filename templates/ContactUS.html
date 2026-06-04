@@ -8,23 +8,92 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='ContactUS.css') }}">
 </head>
 <body>
-  <nav>
-    <a href="/" class="logo">Health<span>Care</span></a>
 
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/explore-diseases">Diseases</a>
-      <a href="/HealthTip1">Health Tip</a>
-      <a href="/faq">FAQ</a>
-      <a href="/contact">Contact Us</a>
-      <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Appointment</a>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="/" class="logo">
+
+        Health<span>Care</span>
+
+    </a>
+
+    
+
+
+<div class="nav-links">
+
+    <a href="/">Home</a>
+
+    <a href="/explore-diseases">
+        Diseases
+    </a>
+
+    <!-- COMMON DISEASES DROPDOWN -->
+    <div class="dropdown">
+
+        <a href="#">
+            Common Diseases
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="/diabetes">
+                Diabetes
+            </a>
+
+            <a href="/cancer">
+                Cancer
+            </a>
+
+            <a href="/asthma">
+                Asthma
+            </a>
+
+        </div>
+
     </div>
 
-    <div class="nav-buttons">
-      <a href="/symptom-checker" class="ai-btn">AI Checker</a>
-      <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="login-btn">Login</a>
-    </div>
-  </nav>
+
+      <a href="/HealthTip1">
+        Health Tip
+    </a>
+    <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">
+        Appointment
+    </a>
+
+  
+
+</div>
+
+<div class="nav-buttons">
+
+    <a href="/symptom-checker" class="ai-btn">
+
+        AI Checker
+
+    </a>
+
+    <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="login-btn">
+
+        Login
+
+    </a>
+
+    <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="signup-btn">
+
+        Sign Up
+
+    </a>
+
+</div>
+
+</nav>
+
+
+
 
   <main class="contact-page">
     <section class="contact-hero">
@@ -67,6 +136,121 @@
     </form>
     </section>
   </main>
+
+
+  
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Healthcare Consultant
+
+            </h3>
+
+            <p>
+
+                Smart healthcare platform for
+                AI symptom analysis,
+                disease exploration,
+                prevention tips,
+                and appointment booking.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <a href="/">Home</a>
+
+            <a href="/explore-diseases">Explore Diseases</a>
+
+            <a href="/symptom-checker">AI Symptoms Checker</a>
+
+           <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Resources
+
+            </h3>
+
+            <a href="/HealthTip1">Health Tips</a>
+
+            <a href="/faq">FAQs</a>
+
+            <a href="/prevention-care">Prevention & Care</a>
+
+        </div>
+
+
+
+
+
+        <div class="footer-section">
+
+            <h3>
+
+                Contact
+
+            </h3>
+            <a href="/contact">Contact</a>
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
+
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
+
+            <p>Bangkok, Thailand</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            &copy; 2026 Healthcare Consultant
+
+        </p>
+
+    </div>
+
+</footer>
+
+
 
   <script src="{{ url_for('static', filename='ContactUS.js') }}"></script>
 </body>
