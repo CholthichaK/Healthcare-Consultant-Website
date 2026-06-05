@@ -11,7 +11,7 @@ $email = trim($_POST['email'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
 if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $message === '') {
-    header('Location: http://127.0.0.1:5000/contact?status=error');
+    header('Location: http://127.0.0.1:5001/contact?status=error');
     exit();
 }
 
@@ -35,9 +35,9 @@ $stmt = $conn->prepare("
 $stmt->bind_param("sss", $name, $email, $message);
 
 if ($stmt->execute()) {
-    header('Location: http://127.0.0.1:5000/contact?status=success');
+    header('Location: http://127.0.0.1:5001/contact?status=success');
 } else {
-    header('Location: http://127.0.0.1:5000/contact?status=error');
+    header('Location: http://127.0.0.1:5001/contact?status=error');
 }
 
 $stmt->close();
