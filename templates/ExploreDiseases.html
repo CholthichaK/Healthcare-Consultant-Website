@@ -3,804 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Diseases</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
-        }
-
-        body {
-            background: #FFFFFF;
-        }
-
-
-:root {
-
-    --primary: #89CFF0;
-    --secondary: #FFB6C1;
-    --accent: #FFF5BA;
-
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-
-}
-      /* NAVIGATION */
-
-nav {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    background: rgba(255,255,255,0.9);
-
-    backdrop-filter: blur(10px);
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 18px 6%;
-
-    border-bottom: 1px solid #eee;
-
-    width: 100%;
-
-}
-
-
-.logo {
-
-    font-size: 2rem;
-
-    font-weight: 800;
-
-    text-decoration: none;
-
-    color: var(--text-dark);
-
-    flex-shrink: 0;
-
-}
-
-
-.logo span {
-
-    color: var(--primary);
-
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    gap: 24px;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-}
-
-
-.nav-links a {
-
-    text-decoration: none;
-
-    color: var(--text-dark);
-
-    font-weight: 500;
-
-    transition: 0.3s;
-
-}
-
-
-.nav-links a:hover {
-
-    color: var(--primary);
-
-}
-
-
-.nav-buttons {
-
-    display: flex;
-
-    gap: 15px;
-
-    align-items: center;
-
-    flex-shrink: 0;
-
-}
-
-
-.ai-btn {
-
-    text-decoration: none;
-
-    color: white;
-
-    font-weight: 600;
-
-    padding: 13px 28px;
-
-    border-radius: 50px;
-
-    background: linear-gradient(
-        270deg,
-        #89CFF0,
-        #FFB6C1,
-        #FFF5BA
-    );
-
-    background-size: 400% 400%;
-
-    animation: gradientMove 6s ease infinite;
-
-}
-
-
-.login-btn {
-
-    text-decoration: none;
-
-    color: var(--text-dark);
-
-    border: 2px solid var(--primary);
-
-    padding: 10px 22px;
-
-    border-radius: 50px;
-
-}
-
-
-.signup-btn {
-
-    text-decoration: none;
-
-    color: white;
-
-    background: var(--primary);
-
-    padding: 12px 24px;
-
-    border-radius: 50px;
-
-}
-
-        /* ========= SOFT PASTEL DESIGN SYSTEM WITH BLUE LETTER BOX ========= */
-        .explore-diseases {
-            background: linear-gradient(145deg, #FFFFFF 0%, #FFFDF5 100%);
-            padding: 48px 24px 70px;
-            position: relative;
-        }
-
-        .explore-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* pastel decorative elements */
-        .explore-diseases::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 320px;
-            height: 320px;
-            background: radial-gradient(circle, rgba(137,207,240,0.12) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 100%;
-            pointer-events: none;
-        }
-        .explore-diseases::after {
-            content: '';
-            position: absolute;
-            bottom: 40px;
-            left: 0;
-            width: 260px;
-            height: 260px;
-            background: radial-gradient(circle, rgba(255,182,193,0.1) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 100%;
-            pointer-events: none;
-        }
-
-        .small-title {
-            font-size: 0.8rem;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: #89CFF0;
-            font-weight: 700;
-            margin-bottom: 18px;
-            background: rgba(137,207,240,0.12);
-            display: inline-block;
-            padding: 5px 16px;
-            border-radius: 40px;
-            backdrop-filter: blur(2px);
-        }
-
-        .explore-content h1 {
-            font-size: 64px;
-            font-weight: 800;
-            background: linear-gradient(125deg, #5F9DC9, #FF9EB5);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-            letter-spacing: -0.02em;
-        }
-
-        .explore-content h1 span {
-            background: linear-gradient(125deg, #FFB6C1, #FF9EB5);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        .description {
-            color: #5a6e7c;
-            font-size: 1.1rem;
-            line-height: 1.55;
-            max-width: 680px;
-            margin-bottom: 32px;
-            font-weight: 500;
-        }
-
-        /* ===== FOUR DISTINCT PASTEL BUTTONS ===== */
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin-bottom: 48px;
-        }
-
-        .disease-btn {
-            text-decoration: none;
-            padding: 12px 32px;
-            border-radius: 60px;
-            font-weight: 600;
-            transition: 0.25s ease;
-            font-size: 0.95rem;
-            background: #89CFF0;
-            border: 1.5px solid #89CFF0;
-            color: #1e3b5c;
-            box-shadow: 0 2px 8px rgba(137,207,240,0.25);
-        }
-        .disease-btn:hover {
-            background: #7bc0e3;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(137,207,240,0.35);
-        }
-
-        .condition-btn {
-            text-decoration: none;
-            padding: 12px 32px;
-            border-radius: 60px;
-            font-weight: 600;
-            transition: 0.25s ease;
-            font-size: 0.95rem;
-            background: #FFB6C1;
-            border: 1.5px solid #FFB6C1;
-            color: #7a3e4a;
-            box-shadow: 0 2px 8px rgba(255,182,193,0.25);
-        }
-        .condition-btn:hover {
-            background: #f5a5b2;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(255,182,193,0.35);
-        }
-
-        .prevention-btn {
-            text-decoration: none;
-            padding: 12px 32px;
-            border-radius: 60px;
-            font-weight: 600;
-            transition: 0.25s ease;
-            font-size: 0.95rem;
-            background: #FFF5BA;
-            border: 1.5px solid #FFF5BA;
-            color: #6b5a2e;
-            box-shadow: 0 2px 8px rgba(255,245,186,0.3);
-        }
-        .prevention-btn:hover {
-            background: #f5eaa8;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(255,245,186,0.4);
-        }
-
-        .care-btn {
-            text-decoration: none;
-            padding: 12px 32px;
-            border-radius: 60px;
-            font-weight: 600;
-            transition: 0.25s ease;
-            font-size: 0.95rem;
-            background: #B0E0C9;
-            border: 1.5px solid #B0E0C9;
-            color: #2b5a45;
-            box-shadow: 0 2px 8px rgba(176,224,201,0.3);
-        }
-        .care-btn:hover {
-            background: #9fcfb8;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(176,224,201,0.4);
-        }
-
-        /* FILTER BOX */
-        .filter-box {
-            background: #FFFFFF;
-            border-radius: 48px;
-            padding: 26px 32px;
-            margin: 16px 0 36px;
-            box-shadow: 0 12px 28px -12px rgba(137,207,240,0.2);
-            border: 1px solid rgba(137,207,240,0.35);
-            backdrop-filter: blur(2px);
-        }
-
-        .filter-box p {
-            font-weight: 650;
-            margin-bottom: 20px;
-            color: #2f5b7c;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .filter-box p::before {
-            font-size: 1.2rem;
-        }
-
-        .filter-group {
-            display: flex;
-            justify-content: flex-start;
-            gap: 16px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .filter-group label {
-            font-weight: 600;
-            color: #FFB6C1;
-            background: #FFF5FA;
-            padding: 5px 12px;
-            border-radius: 40px;
-        }
-
-        input, select {
-            padding: 12px 24px;
-            border-radius: 60px;
-            border: 1.5px solid #f0dbe0;
-            font-size: 0.95rem;
-            background: white;
-            transition: 0.2s;
-            outline: none;
-            font-weight: 500;
-            color: #2c4c6e;
-        }
-
-        input:focus, select:focus {
-            border-color: #89CFF0;
-            box-shadow: 0 0 0 3px rgba(137,207,240,0.25);
-        }
-
-        input {
-            width: 290px;
-        }
-
-        /* ===== DISEASE GRID - BLUE LETTER BOX ===== */
-        .disease-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 28px;
-            margin-top: 32px;
-        }
-
-        .card {
-            background: #FFFFFF;
-            border-radius: 36px;
-            padding: 26px 24px;
-            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border: 1px solid #ffeef2;
-            box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.04);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 32px -16px rgba(137,207,240,0.28);
-            border-color: #FFE0E8;
-            background: #FFFEFC;
-        }
-
-        /* BLUE LETTER BOX - primary color #89CFF0 (soft blue) */
-        .letter-box {
-            width: 74px;
-            height: 74px;
-            background: linear-gradient(135deg, #89CFF0 0%, #A7D8F5 100%);
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 22px;
-            box-shadow: 0 8px 16px -8px rgba(137,207,240,0.4), inset 0 1px 2px rgba(255,255,255,0.5);
-            transition: transform 0.2s ease;
-        }
-        
-        .card:hover .letter-box {
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px -8px rgba(137,207,240,0.5);
-        }
-
-        .letter-box h2 {
-            font-size: 42px;
-            color: #FFFFFF;
-            font-weight: 800;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            letter-spacing: 1px;
-        }
-
-        .card h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #3c6b8f;
-            margin-bottom: 12px;
-            letter-spacing: -0.3px;
-        }
-
-        .info {
-            color: #55758b;
-            line-height: 1.5;
-            margin-bottom: 22px;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .care-title {
-            color: #FF9EB5;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            border-left: 4px solid #89CFF0;
-            padding-left: 14px;
-            background: #FFF9FB;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .care {
-            color: #4f6f8a;
-            line-height: 1.55;
-            font-size: 0.9rem;
-        }
-
-        .no-result {
-            text-align: center;
-            font-size: 1.3rem;
-            padding: 56px;
-            background: #FFFEF7;
-            border-radius: 56px;
-            color: #a0b9ce;
-            grid-column: 1 / -1;
-            border: 1px dashed #FFB6C1;
-        }
-
-        
-
-/* FOOTER */
-
-footer {
-
-    margin-top: 100px;
-
-    background: white;
-
-    padding: 70px 6% 20px;
-
-}
-
-
-.footer-container {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-
-    gap: 40px;
-
-}
-
-
-.footer-section h3 {
-
-    margin-bottom: 20px;
-
-}
-
-
-.footer-section p,
-.footer-section a {
-
-    color: var(--text-light);
-
-    text-decoration: none;
-
-    display: block;
-
-    margin-bottom: 12px;
-
-}
-
-
-.footer-bottom {
-
-    margin-top: 50px;
-
-    border-top: 1px solid #eee;
-
-    padding-top: 20px;
-
-    text-align: center;
-
-    color: var(--text-light);
-
-}
-
-
-@keyframes gradientMove {
-
-    0% {
-
-        background-position: 0% 50%;
-
-    }
-
-    50% {
-
-        background-position: 100% 50%;
-
-    }
-
-    100% {
-
-        background-position: 0% 50%;
-
-    }
-
-}
-
-
-/* DROPDOWN */
-
-.dropdown {
-
-    position: relative;
-
-}
-
-
-.dropdown-content {
-
-    position: absolute;
-
-    top: 35px;
-
-    left: 0;
-
-    background: white;
-
-    min-width: 220px;
-
-    border-radius: 20px;
-
-    padding: 12px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transform: translateY(10px);
-
-    transition: 0.3s;
-
-    z-index: 999;
-
-}
-
-
-.dropdown-content a {
-
-    display: block;
-
-    padding: 12px 15px;
-
-    border-radius: 12px;
-
-    transition: 0.3s;
-
-}
-
-
-.dropdown-content a:hover {
-
-    background: rgba(137,207,240,0.15);
-
-}
-
-
-.dropdown:hover .dropdown-content {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    transform: translateY(0);
-
-}
-
-
-        /* pastel accent for letter jump highlight */
-        @keyframes pastelFlash {
-            0% { background-color: #FFF5BA; }
-            100% { background-color: #ffffff; }
-        }
-        .highlight-card {
-            animation: pastelFlash 0.9s ease;
-        }
-
-        @media (max-width: 640px) {
-            .explore-content h1 { font-size: 42px; }
-            .card h3 { font-size: 1.5rem; }
-            .filter-box { padding: 20px; }
-            .disease-btn, .condition-btn, .prevention-btn, .care-btn {
-                padding: 8px 20px;
-                font-size: 0.85rem;
-            }
-            .letter-box {
-                width: 60px;
-                height: 60px;
-            }
-            .letter-box h2 {
-                font-size: 34px;
-            }
-        }
-    </style>
-
-</head>
+    <title>Explore Diseases | Healthcare Consultant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='HomeStyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ExploreDiseases.css') }}">
+    
 <body>
 
-
-
-
-   <!-- NAVIGATION -->
-
+<!-- NAVIGATION -->
 <nav>
-
-    <a href="/" class="logo">
-
-        Health<span>Care</span>
-
-    </a>
-
+    <a href="/" class="logo">Health<span>Care</span></a>
+    
     <div class="nav-links">
-
         <a href="/">Home</a>
-
-        <a href="/explore-diseases">
-            Diseases
-        </a>
-
-        <!-- COMMON DISEASES DROPDOWN -->
+        <a href="/explore-diseases">Diseases</a>
+        
         <div class="dropdown">
-
-            <a href="#">
-                Common Diseases
-            </a>
-
+            <a href="#">Common Diseases</a>
             <div class="dropdown-content">
-
-                <a href="/diabetes">
-                    Diabetes
-                </a>
-
-                <a href="/cancer">
-                    Cancer
-                </a>
-
-                <a href="/asthma">
-                    Asthma
-                </a>
-
+                <a href="/diabetes">Diabetes</a>
+                <a href="/cancer">Cancer</a>
+                <a href="/asthma">Asthma</a>
             </div>
-
         </div>
-
-        <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">
-            Appointment
-        </a>
-
-        <a href="/contact">
-            Contact
-        </a>
-
+        
+        <a href="/appointment">Appointment</a>
+        <a href="/contact">Contact</a>
     </div>
-
+    
     <div class="nav-buttons">
-
-        <a href="/symptom-checker" class="ai-btn">
-
-            AI Checker
-
-        </a>
-
-         <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="login-btn">
-
-            Login
-
-        </a>
-
-        <a href="http://localhost/Healthcare-Consultant-Website/index.php" class="signup-btn">
-
-            Sign Up
-
-        </a>
-
+        <a href="/symptom-checker" class="ai-btn">AI Checker</a>
+        <a href="/login" class="login-btn">Login</a>
+        <a href="/signup" class="signup-btn">Sign Up</a>
     </div>
-
 </nav>
-</div>
 
+<!-- EXPLORE DISEASES SECTION -->
 <section class="explore-diseases">
     <div class="explore-content">
-
-        <h1>
-            Explore
-            <span>Diseases</span>
-        </h1>
-
+        <h1>Explore <span>Diseases</span></h1>
+        
         <p class="description">
             Learn about different diseases, symptoms, causes, prevention methods, and available
             treatments through our healthcare platform.
         </p>
 
-        <!-- FOUR DIFFERENT PASTEL COLOR BUTTONS -->
         <div class="buttons">
-            <a href="#" class="disease-btn">Diseases</a>
-            <a href="#" class="condition-btn"> Conditions</a>
-            <a href="#" class="prevention-btn">Prevention</a>
+            <a href="#" class="disease-btn"> Diseases</a>
+            <a href="#" class="condition-btn">Conditions</a>
+            <a href="#" class="prevention-btn"> Prevention</a>
             <a href="#" class="care-btn">Care</a>
         </div>
 
-        <!-- PASTEL FILTER BOX — search & jump -->
         <div class="filter-box">
-            <p>Find diseases & conditions by first letter or name</p>
+            <p>📋 Find diseases & conditions by first letter or name</p>
             <div class="filter-group">
-                <input type="text" id="searchBox" placeholder="🔍 Search disease (e.g., asthma, malaria, covid)..." onkeyup="filterDiseases()">
+                <input type="text" id="searchBox" placeholder="Search disease (e.g., asthma, malaria, covid)..." onkeyup="filterDiseases()">
                 <select id="alphabetJump" onchange="jumpToLetter(this.value)">
-                    <option value="">✨ Jump to letter</option>
-                    <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option>
-                    <option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option>
-                    <option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option>
-                    <option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option>
-                    <option value="Q">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option>
-                    <option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="X">X</option>
+                    <option value=""> Jump to letter</option>
+                    <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+                    <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+                    <option value="G">G</option><option value="H">H</option><option value="I">I</option>
+                    <option value="J">J</option><option value="K">K</option><option value="L">L</option>
+                    <option value="M">M</option><option value="N">N</option><option value="O">O</option>
+                    <option value="P">P</option><option value="Q">Q</option><option value="R">R</option>
+                    <option value="S">S</option><option value="T">T</option><option value="U">U</option>
+                    <option value="V">V</option><option value="W">W</option><option value="X">X</option>
                     <option value="Y">Y</option><option value="Z">Z</option>
                 </select>
             </div>
         </div>
 
-        <!-- Disease grid (dynamic) -->
         <div class="disease-container" id="diseaseGrid"></div>
     </div>
 </section>
@@ -846,13 +118,13 @@ footer {
 
             </h3>
 
-             <a href="/">Home</a>
+            <a href="/">Home</a>
 
             <a href="/explore-diseases">Explore Diseases</a>
 
-           <a href="/symptom-checker" class="ai-btn">
+            <a href="/symptom-checker">AI Symptoms Checker</a>
 
-            <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">
+           <a href="http://localhost/Healthcare-Consultant-Website/appointment.php">Book Appointment</a>
 
         </div>
 
@@ -869,11 +141,14 @@ footer {
             </h3>
 
             <a href="/HealthTip1">Health Tips</a>
+
             <a href="/faq">FAQs</a>
+
             <a href="/prevention-care">Prevention & Care</a>
             <a href="/doctors">Doctors</a>
             <a href="/about">About Us</a>
             <a href="http://localhost/Healthcare-Consultant-Website/patient_dashboard.php">Dashboard</a>
+
         </div>
 
 
@@ -888,9 +163,9 @@ footer {
 
             </h3>
             <a href="/contact">Contact</a>
-            <p>Email: healthcare@gmail.com</p>
+            <p><a href="mailto:healthcare@gmail.com">healthcare@gmail.com</a></p>
 
-            <p>Phone: +66 123 456 789</p>
+            <p><a href="tel:+66123456789">+66 123 456 789</a></p>
 
             <p>Bangkok, Thailand</p>
 
@@ -914,220 +189,6 @@ footer {
 
 </footer>
 
-
-
-<script>
-    // ---------- 3 DISEASES PER LETTER (A–Z) ----------
-    const diseasesLibrary = {
-        A: [
-            { name: "Asthma", info: "Asthma is a chronic lung disease that inflames and narrows the airways, leading to breathing difficulty, coughing, and wheezing.", care: "Avoid smoke, dust, pollen; use prescribed inhalers; create an asthma action plan." },
-            { name: "Anemia", info: "Anemia occurs when blood lacks enough healthy red blood cells, causing fatigue, pale skin, and weakness.", care: "Eat iron-rich foods (spinach, red meat), vitamin C for absorption, and follow medical advice." },
-            { name: "Arthritis", info: "Arthritis causes joint pain, swelling, and stiffness; osteoarthritis and rheumatoid arthritis are common types.", care: "Exercise regularly, maintain healthy weight, physical therapy, anti-inflammatory diet." }
-        ],
-        B: [
-            { name: "Breast Cancer", info: "Breast cancer develops in breast cells, often forming lumps. Early detection improves outcomes.", care: "Regular mammograms, self-exams, healthy lifestyle, and follow medical treatments." },
-            { name: "Bronchitis", info: "Inflammation of bronchial tubes causing mucus buildup, cough, and fatigue. Acute or chronic forms.", care: "Avoid smoking, rest, drink fluids, use humidifier, and seek medication if bacterial." },
-            { name: "Bipolar Disorder", info: "Mental health condition with extreme mood swings between depression and mania.", care: "Stick to therapy, mood stabilizers, maintain sleep routine, and avoid triggers." }
-        ],
-        C: [
-            { name: "Cancer", info: "Cancer involves abnormal growth of cells in the body, potentially spreading to other areas.", care: "Avoid smoking, maintain healthy habits, attend regular screenings." },
-            { name: "COVID-19", info: "Contagious viral infection causing fever, cough, loss of taste, and breathing issues.", care: "Vaccination, hand hygiene, masking in high-risk settings, rest, and isolation when sick." },
-            { name: "Cataract", info: "Clouding of the eye lens leading to blurry vision and glare, common in older adults.", care: "Protect eyes from UV, regular eye exams, surgery if vision is severely affected." }
-        ],
-        D: [
-            { name: "Diabetes", info: "Chronic condition affecting how the body processes blood sugar, leading to high glucose levels.", care: "Balanced diet, regular exercise, monitor blood sugar, medication or insulin as prescribed." },
-            { name: "Depression", info: "Mood disorder causing persistent sadness, loss of interest, and low energy.", care: "Therapy (CBT), social support, physical activity, and antidepressants if needed." },
-            { name: "Dermatitis (Eczema)", info: "Inflammatory skin condition with redness, itching, and dry patches.", care: "Moisturize daily, avoid harsh soaps, identify triggers, use topical steroids if prescribed." }
-        ],
-        E: [
-            { name: "Eczema", info: "Eczema causes dry, itchy, and irritated skin, common in children and adults.", care: "Use moisturizers, avoid harsh soaps, manage stress." },
-            { name: "Epilepsy", info: "Neurological disorder causing recurrent seizures due to abnormal brain activity.", care: "Take anticonvulsant medication, avoid seizure triggers, get enough sleep, medical ID bracelet." },
-            { name: "Ear Infection (Otitis Media)", info: "Middle ear infection causing pain, fluid buildup, and temporary hearing loss.", care: "Pain relief, warm compress, antibiotics for bacterial, keep ears dry." }
-        ],
-        F: [
-            { name: "Fibromyalgia", info: "Fibromyalgia causes widespread musculoskeletal pain and fatigue.", care: "Stress management, gentle exercise, and medication as prescribed." },
-            { name: "Fracture", info: "Broken bone from trauma or stress, causing pain, swelling, and loss of function.", care: "Immobilize, seek medical care, follow rehab exercises, calcium-rich diet." },
-            { name: "Food Poisoning", info: "Illness from contaminated food causing nausea, vomiting, and diarrhea.", care: "Stay hydrated, rest, avoid dairy, seek care if severe or blood in stool." }
-        ],
-        G: [
-            { name: "Gastritis", info: "Inflammation of stomach lining causing abdominal pain, nausea, and bloating.", care: "Avoid spicy/acidic foods, reduce alcohol, take prescribed antacids, manage stress." },
-            { name: "Glaucoma", info: "Eye condition damaging optic nerve, often from high eye pressure; can lead to blindness.", care: "Regular eye pressure checks, prescribed drops, surgery if advanced." },
-            { name: "Gout", info: "Arthritis form with sudden joint pain due to uric acid crystals, often in big toe.", care: "Hydration, low-purine diet (avoid red meat, alcohol), anti-inflammatory meds." }
-        ],
-        H: [
-            { name: "Hypertension", info: "High blood pressure, often 'silent killer', increases heart disease and stroke risk.", care: "Low-sodium diet, regular exercise, stress reduction, BP monitoring, medication." },
-            { name: "Hepatitis B", info: "Viral liver infection causing jaundice, fatigue, and long-term liver damage.", care: "Vaccination, avoid alcohol, safe sex, antiviral therapy if chronic." },
-            { name: "Hypothyroidism", info: "Underactive thyroid leads to fatigue, weight gain, and cold sensitivity.", care: "Thyroid hormone replacement, regular TSH tests, balanced diet." }
-        ],
-        I: [
-            { name: "Insomnia", info: "Sleep disorder with trouble falling/staying asleep, leading to daytime tiredness.", care: "Regular sleep schedule, limit caffeine, relaxation techniques, cognitive behavioral therapy." },
-            { name: "Irritable Bowel Syndrome (IBS)", info: "Functional gut disorder with cramping, bloating, and altered bowel habits.", care: "Low FODMAP diet, stress management, fiber adjustments, probiotics." },
-            { name: "Iron Deficiency Anemia", info: "Low iron levels causing fatigue, pale skin, and brittle nails.", care: "Iron supplements, eat iron-rich foods (lentils, meat), vitamin C for absorption." }
-        ],
-        J: [
-            { name: "Jaundice", info: "Yellowing of skin/eyes from high bilirubin, often due to liver issues.", care: "Treat underlying cause, hydration, avoid alcohol, medical evaluation." },
-            { name: "Juvenile Arthritis", info: "Autoimmune arthritis in children causing joint pain and stiffness.", care: "Physical therapy, NSAIDs, disease-modifying drugs, regular rheumatology care." },
-            { name: "Jaw Disorders (TMJ)", info: "Temporomandibular joint dysfunction causing jaw pain, clicking, and headaches.", care: "Soft diet, jaw exercises, avoid gum chewing, dental splint if needed." }
-        ],
-        K: [
-            { name: "Kidney Stones", info: "Hard mineral deposits causing severe flank pain and hematuria.", care: "Drink 2-3L water daily, limit oxalate-rich foods, pain management, lithotripsy if large." },
-            { name: "Keratitis", info: "Corneal inflammation causing eye pain, redness, and blurred vision.", care: "Contact lens hygiene, avoid sleeping in lenses, antibiotic/antiviral drops." },
-            { name: "Keloids", info: "Raised overgrowth of scar tissue after skin injury.", care: "Silicone sheets, steroid injections, avoid unnecessary piercings, laser therapy." }
-        ],
-        L: [
-            { name: "Leukemia", info: "Blood cancer affecting white blood cells, causing infections and fatigue.", care: "Chemotherapy, targeted therapy, regular blood counts, stem cell transplant possible." },
-            { name: "Lupus", info: "Autoimmune disease causing inflammation in joints, skin, and organs.", care: "Sun protection, anti-inflammatory meds, corticosteroids, rheumatologist follow-up." },
-            { name: "Lyme Disease", info: "Tick-borne illness with bullseye rash, fever, and joint pain.", care: "Doxycycline treatment, tick checks after outdoors, insect repellent." }
-        ],
-        M: [
-            { name: "Malaria", info: "Mosquito-borne parasitic disease causing fever, chills, and anemia.", care: "Mosquito nets, repellents, antimalarial drugs, early diagnosis." },
-            { name: "Migraine", info: "Intense headache with nausea, light sensitivity, and aura.", care: "Identify triggers (stress, foods), triptans, hydration, dark room rest." },
-            { name: "Meningitis", info: "Inflammation of brain/spinal cord membranes; bacterial form is emergency.", care: "Vaccination (meningococcal), prompt antibiotics, hospitalization for severe cases." }
-        ],
-        N: [
-            { name: "Pneumonia", info: "Lung infection with fever, cough, and difficulty breathing.", care: "Vaccines (pneumococcal), antibiotics for bacterial, rest, hydration, oxygen if needed." },
-            { name: "Norovirus", info: "Highly contagious stomach virus causing vomiting and diarrhea.", care: "Handwashing, isolation, hydration, disinfect surfaces." },
-            { name: "Neuralgia", info: "Sharp nerve pain along a nerve pathway, often postherpetic.", care: "Anticonvulsants, pain management, avoid triggers, topical lidocaine." }
-        ],
-        O: [
-            { name: "Osteoporosis", info: "Brittle bones from low density, increasing fracture risk.", care: "Calcium/vitamin D, weight-bearing exercises, bisphosphonates, fall prevention." },
-            { name: "Obesity", info: "Excess body fat raising risk for diabetes, heart disease, and joint issues.", care: "Balanced diet, physical activity, behavioral changes, medical support." },
-            { name: "Otitis Media (Ear Infection)", info: "Middle ear infection common in kids; causes earache and fever.", care: "Pain relief, warm compress, antibiotics if severe, watchful waiting." }
-        ],
-        P: [
-            { name: "Parkinson’s Disease", info: "Progressive nervous system disorder affecting movement, tremors, and stiffness.", care: "Medication (levodopa), physical therapy, speech therapy, exercise routines." },
-            { name: "Psoriasis", info: "Chronic skin condition with red, scaly plaques.", care: "Topical creams, phototherapy, avoid triggers, biologic agents for severe cases." },
-            { name: "Peptic Ulcer", info: "Sore in stomach lining causing burning pain and bloating.", care: "Antibiotics for H. pylori, avoid NSAIDs, acid reducers, diet modification." }
-        ],
-        Q: [
-            { name: "Q Fever", info: "Bacterial infection from animals causing high fever and pneumonia.", care: "Doxycycline treatment, avoid contact with infected livestock, hygiene." },
-            { name: "Quadriplegia", info: "Paralysis of all limbs due to spinal cord injury.", care: "Rehabilitation, assistive devices, respiratory support, pressure sore prevention." },
-            { name: "Quinsy (Peritonsillar Abscess)", info: "Complication of tonsillitis with severe throat pain and swelling.", care: "Antibiotics, drainage, hydration, tonsillectomy for recurrent cases." }
-        ],
-        R: [
-            { name: "Rabies", info: "Fatal viral disease from animal bites affecting the nervous system.", care: "Immediate wound cleaning, post-exposure vaccine series, vaccinate pets." },
-            { name: "Rheumatoid Arthritis", info: "Autoimmune arthritis causing painful joint swelling and deformity.", care: "DMARDs, physical therapy, anti-inflammatory diet, smoking cessation." },
-            { name: "Ringworm", info: "Fungal skin infection with ring-shaped rash and itching.", care: "Antifungal cream, keep area dry, avoid sharing towels/personal items." }
-        ],
-        S: [
-            { name: "Stroke", info: "Brain damage from interrupted blood flow; causes weakness or speech issues.", care: "Emergency care, blood pressure control, rehabilitation, antiplatelet meds." },
-            { name: "Sinusitis", info: "Inflammation of sinuses causing facial pressure and thick mucus.", care: "Nasal irrigation, steam inhalation, decongestants, antibiotics if bacterial." },
-            { name: "Skin Cancer (Melanoma)", info: "Serious skin cancer from UV damage; irregular moles.", care: "Sun protection, regular dermatology checks, surgical excision for early stages." }
-        ],
-        T: [
-            { name: "Tuberculosis (TB)", info: "Bacterial lung infection causing cough, night sweats, and weight loss.", care: "Completion of 6-9 month antibiotic course, isolation initially, vaccination (BCG)." },
-            { name: "Tonsillitis", info: "Inflamed tonsils causing sore throat and fever.", care: "Hydration, warm salt gargles, pain relief, tonsillectomy for recurrent cases." },
-            { name: "Tetanus", info: "Bacterial infection causing muscle stiffness and lockjaw.", care: "Vaccination (booster every 10 years), wound cleaning, antitoxin if infected." }
-        ],
-        U: [
-            { name: "Urinary Tract Infection (UTI)", info: "Bladder/kidney infection causing burning urination and frequency.", care: "Antibiotics, drink water, urinate after intercourse, cranberry (adjunct)." },
-            { name: "Urticaria (Hives)", info: "Itchy, raised welts from allergic reactions or stress.", care: "Antihistamines, avoid known triggers, cool compresses, identify allergens." },
-            { name: "Uveitis", info: "Eye inflammation causing redness, pain, and floaters.", care: "Steroid eye drops, treat underlying autoimmune disease, prompt ophthalmology visit." }
-        ],
-        V: [
-            { name: "Varicella (Chickenpox)", info: "Viral illness with itchy vesicles and fever.", care: "Vaccination, calamine lotion, avoid scratching, isolation until crusted." },
-            { name: "Vertigo", info: "Sensation of spinning due to inner ear issues or BPPV.", care: "Epley maneuver, vestibular rehab, hydration, avoid sudden head movements." },
-            { name: "Vitiligo", info: "Skin depigmentation patches from melanocyte loss.", care: "Sun protection, cosmetic camouflage, topical steroids, phototherapy." }
-        ],
-        W: [
-            { name: "Whooping Cough (Pertussis)", info: "Respiratory infection with severe coughing fits and 'whoop' sound.", care: "Vaccination (DTaP), antibiotics, rest, isolation to prevent spread." },
-            { name: "Warts", info: "Skin growths from HPV, often on hands or feet.", care: "Salicylic acid, cryotherapy, avoid picking, duct tape therapy." },
-            { name: "Wilson’s Disease", info: "Genetic copper accumulation causing liver and neurological damage.", care: "Chelation therapy, low-copper diet, lifelong monitoring, avoid shellfish." }
-        ],
-        X: [
-            { name: "Xeroderma Pigmentosum", info: "Extreme UV sensitivity causing skin cancers and eye problems.", care: "Complete sun avoidance, protective clothing, regular skin exams, sunglasses." },
-            { name: "Xanthoma", info: "Fatty deposits under skin related to high cholesterol.", care: "Lipid-lowering diet, statins if needed, surgical removal for cosmetic reasons." },
-            { name: "Xerosis (Dry Skin)", info: "Abnormally dry, rough, itchy skin often due to environment.", care: "Moisturizers, humidifier, gentle cleansers, avoid long hot showers." }
-        ],
-        Y: [
-            { name: "Yellow Fever", info: "Mosquito-borne viral hemorrhagic disease with jaundice.", care: "Vaccination (mandatory for travel), mosquito repellent, supportive care." },
-            { name: "Yeast Infection (Candidiasis)", info: "Fungal infection causing itching and discharge.", care: "Antifungal creams, keep area dry, cotton underwear, reduce sugar intake." },
-            { name: "Yersiniosis", info: "Bacterial infection from pork or contaminated milk; causes diarrhea.", care: "Hydration, antibiotics in severe cases, proper food handling, handwashing." }
-        ],
-        Z: [
-            { name: "Zika Virus", info: "Mosquito-borne virus causing fever, rash, and birth defects if pregnant.", care: "Mosquito protection, avoid pregnancy during outbreak, supportive care." },
-            { name: "Zoster (Shingles)", info: "Painful rash from reactivated varicella-zoster virus.", care: "Antiviral within 72h, pain management, vaccine (Shingrix) for adults over 50." },
-            { name: "Zollinger-Ellison Syndrome", info: "Tumors cause excess stomach acid, leading to ulcers.", care: "Proton pump inhibitors, tumor removal, regular endoscopy, medication adherence." }
-        ]
-    };
-
-    // flatten data
-    let allCards = [];
-    for (let letter in diseasesLibrary) {
-        for (let d of diseasesLibrary[letter]) {
-            allCards.push({ letter, name: d.name, info: d.info, care: d.care });
-        }
-    }
-
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        });
-    }
-
-    function renderGrid(search = "") {
-        const container = document.getElementById("diseaseGrid");
-        const lower = search.trim().toLowerCase();
-        let filtered = allCards;
-        if (lower !== "") filtered = allCards.filter(c => c.name.toLowerCase().includes(lower));
-        if (filtered.length === 0) {
-            container.innerHTML = `<div class="no-result"> No matching diseases found. Try another keyword (e.g., 'fever', 'headache').</div>`;
-            return;
-        }
-        let html = '';
-        for (let card of filtered) {
-            html += `
-                <div class="card">
-                    <div class="letter-box"><h2>${escapeHtml(card.letter)}</h2></div>
-                    <h3>${escapeHtml(card.name)}</h3>
-                    <p class="info">${escapeHtml(card.info)}</p>
-                    <div class="care-title"> Prevention & Care</div>
-                    <p class="care">${escapeHtml(card.care)}</p>
-                </div>
-            `;
-        }
-        container.innerHTML = html;
-    }
-
-    window.filterDiseases = function() {
-        renderGrid(document.getElementById("searchBox").value);
-    };
-
-    window.jumpToLetter = function(letterVal) {
-        if (!letterVal) return;
-        const container = document.getElementById("diseaseGrid");
-        const cards = container.querySelectorAll(".card");
-        let target = null;
-        for (let card of cards) {
-            if (card.querySelector(".letter-box h2")?.innerText === letterVal) { target = card; break; }
-        }
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-            target.classList.add("highlight-card");
-            setTimeout(() => target.classList.remove("highlight-card"), 1200);
-        } else {
-            document.getElementById("searchBox").value = "";
-            renderGrid("");
-            setTimeout(() => {
-                const newCards = document.querySelectorAll(".card");
-                for (let c of newCards) {
-                    if (c.querySelector(".letter-box h2")?.innerText === letterVal) {
-                        c.scrollIntoView({ behavior: "smooth", block: "start" });
-                        c.classList.add("highlight-card");
-                        setTimeout(() => c.classList.remove("highlight-card"), 1200);
-                        break;
-                    }
-                }
-            }, 90);
-        }
-        document.getElementById("alphabetJump").value = "";
-    };
-
-    renderGrid();
-</script>
+<script src="{{ url_for('static', filename='ExploreDiseases.js') }}"></script>
 </body>
 </html>

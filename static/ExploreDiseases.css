@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: #f8fcff;
+}
+
+/* ROOT COLORS */
+:root {
+    --primary: #89CFF0;
+    --secondary: #FFB6C1;
+    --accent: #FFF5BA;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+}
+
+/* ========= NAVIGATION ========= */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ai-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #89CFF0, #FFB6C1, #FFF5BA);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: var(--text-dark);
+    border: 2px solid var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.signup-btn {
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    padding: 10px 22px;
+    border-radius: 50px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+
+.dropdown-content a:hover {
+    background: rgba(137, 207, 240, 0.15);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========= EXPLORE DISEASES SECTION ========= */
+.explore-diseases {
+    padding: 48px 6% 70px;
+}
+
+.explore-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.explore-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    background: linear-gradient(125deg, #5F9DC9, #FF9EB5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.explore-content h1 span {
+    background: linear-gradient(125deg, #FFB6C1, #FF9EB5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.description {
+    color: #5a6e7c;
+    font-size: 1.1rem;
+    line-height: 1.55;
+    max-width: 680px;
+    margin-bottom: 32px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.disease-btn, .condition-btn, .prevention-btn, .care-btn {
+    text-decoration: none;
+    padding: 10px 28px;
+    border-radius: 60px;
+    font-weight: 600;
+    transition: 0.25s ease;
+    font-size: 0.9rem;
+}
+
+.disease-btn { background: #89CFF0; border: 1.5px solid #89CFF0; color: #1e3b5c; }
+.condition-btn { background: #FFB6C1; border: 1.5px solid #FFB6C1; color: #7a3e4a; }
+.prevention-btn { background: #FFF5BA; border: 1.5px solid #FFF5BA; color: #6b5a2e; }
+.care-btn { background: #B0E0C9; border: 1.5px solid #B0E0C9; color: #2b5a45; }
+
+.disease-btn:hover, .condition-btn:hover, .prevention-btn:hover, .care-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== FILTER BOX ===== */
+.filter-box {
+    background: #FFFFFF;
+    border-radius: 48px;
+    padding: 24px 28px;
+    margin: 16px 0 36px;
+    box-shadow: 0 12px 28px -12px rgba(137, 207, 240, 0.2);
+    border: 1px solid rgba(137, 207, 240, 0.35);
+}
+
+.filter-box p {
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #2f5b7c;
+    font-size: 1.1rem;
+}
+
+.filter-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input, select {
+    padding: 12px 22px;
+    border-radius: 60px;
+    border: 1.5px solid #f0dbe0;
+    font-size: 0.95rem;
+    background: white;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #89CFF0;
+}
+
+input {
+    width: 280px;
+}
+
+/* ===== DISEASE GRID ===== */
+.disease-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 28px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    border: 1px solid #ffeef2;
+    box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -12px rgba(137, 207, 240, 0.25);
+}
+
+.letter-box {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #89CFF0 0%, #A7D8F5 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.letter-box h2 {
+    font-size: 38px;
+    color: white;
+    font-weight: 800;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #3c6b8f;
+    margin-bottom: 12px;
+}
+
+.info {
+    color: #55758b;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+}
+
+.care-title {
+    color: #FF9EB5;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-left: 4px solid #89CFF0;
+    padding-left: 12px;
+}
+
+.care {
+    color: #4f6f8a;
+    line-height: 1.5;
+    font-size: 0.85rem;
+}
+
+.no-result {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 50px;
+    background: #FFFEF7;
+    border-radius: 40px;
+    color: #a0b9ce;
+    grid-column: 1 / -1;
+}
+
+.highlight-card {
+    animation: pastelFlash 0.9s ease;
+}
+
+@keyframes pastelFlash {
+    0% { background-color: #FFF5BA; }
+    100% { background-color: #ffffff; }
+}
+
+/* ========= FOOTER ========= */
+footer {
+    margin-top: 60px;
+    background: white;
+    padding: 50px 6% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+}
+
+.footer-section h3 {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .explore-content h1 { font-size: 38px; }
+    .card h3 { font-size: 1.4rem; }
+    .filter-box { padding: 18px; }
+}

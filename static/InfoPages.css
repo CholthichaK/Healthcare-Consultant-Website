@@ -39,6 +39,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 32px;
+  padding: 0 8px;
   
 }
 
@@ -65,7 +66,7 @@
 .doctor-card h3,
 .value-grid h3 {
   color: #10194e;
-  margin-bottom: 8px;
+  margin-bottom: 60px;
 }
 
 .doctor-card p,
