@@ -103,6 +103,7 @@
   flex: 1;
 }
 
+
 .profile-btn,
 .book-btn {
   display: inline-block;
@@ -119,4 +120,24 @@
 
 .book-btn {
   background: #0b8f6a;
+}
+
+.ai-symptom-widget{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    z-index:9999;
+
+    width:250px;
+
+    animation:floatBot 3s ease-in-out infinite;
+}
+
+.ai-symptom-widget img{
+    width:100%;
+    display:block;
+}
+
+.ai-symptom-widget:hover{
+    transform:scale(1.05);
 }
